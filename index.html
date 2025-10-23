@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAW GLOBAL TECH - Innovation Unleashed</title>
+    <!-- Bootstrap CSS for responsiveness -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d6efd; /* Blue */
+            --secondary-color: #6c757d; /* Gray */
+            --accent-color: #ffc107; /* Gold */
+            --bg-dark: #121212;
+            --text-light: #ffffff;
+            --text-dark: #212529;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar:hover {
+            background-color: rgba(18, 18, 18, 1);
+        }
+
+        .navbar-brand {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Ensure animation stays within bounds */
+            background-color: var(--bg-dark); /* Fallback background */
+        }
+
+        .hero-animation-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+            filter: brightness(0.8); /* Slightly dim the background for better contrast */
+        }
+
+        .hero-animation-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0;
+            animation: particleAnimation 20s infinite ease-in-out;
+            box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+        }
+
+        @keyframes particleAnimation {
+            0% {
+                transform: translate(var(--x-start), var(--y-start)) scale(0);
+                opacity: 0;
+            }
+            25% {
+                opacity: 0.5;
+                transform: translate(var(--x-mid1), var(--y-mid1)) scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: translate(var(--x-mid2), var(--y-mid2)) scale(1.2);
+            }
+            75% {
+                opacity: 0.5;
+                transform: translate(var(--x-mid3), var(--y-mid3)) scale(0.8);
+            }
+            100% {
+                transform: translate(var(--x-end), var(--y-end)) scale(0);
+                opacity: 0;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--accent-color);
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-img-top {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .service-icon {
+            color: var(--accent-color);
+        }
+
+        .software-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .software-item {
+            background: #282828;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .software-item:hover {
+            background: #383838;
+        }
+
+        .footer {
+            background-color: #0a0a0a;
+            padding: 2rem 0;
+        }
+
+        .social-link {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        /* Animations for sections */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 80vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- Replace with your actual logo URL or base64 if needed -->
+                <img src="img/rgt_logo.png" alt="RAW GLOBAL TECH Logo" width="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#software">Software</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-animation-container"></div>
+        <div class="hero-content">
+            <h1 class="display-3 fw-bold" style="font-family: 'Orbitron', sans-serif;">RAW GLOBAL <span style="color: var(--primary-color);">TECH</span></h1>
+            <p class="lead">Innovation Unleashed</p>
+            <a href="#services" class="btn btn-primary btn-lg">Explore Our Services</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center">About Us</h2>
+            <p class="text-center mb-5">RAW GLOBAL TECH is a leading provider of IT solutions, specializing in sales, development, maintenance, consulting, and installations of IT equipment, software, websites, and printing press. We unleash innovation to drive your business forward.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-secondary" style="background-color: #1e1e1e;">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="bi bi-cart service-icon"></i> <!-- Use Bootstrap Icons or Font Awesome -->
+                            <h5 class="card-title">Sales</h5>
+                            <p class="card-text">High-quality IT equipment and software solutions tailored to your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="bi bi-code-slash service-icon"></i>
+                            <h5 class="card-title">Development</h5>
+                            <p class="card-text">Custom software and website development for modern businesses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="bi bi-tools service-icon"></i>
+                            <h5 class="card-title">Maintenance</h5>
+                            <p class="card-text">Reliable maintenance services to keep your systems running smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="bi bi-chat-dots service-icon"></i>
+                            <h5 class="card-title">Consulting</h5>
+                            <p class="card-text">Expert advice to optimize your IT infrastructure and strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="bi bi-plug service-icon"></i>
+                            <h5 class="card-title">Installations</h5>
+                            <p class="card-text">Professional installation of IT equipment and Software.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="bi bi-brush service-icon"></i>
+                            <h5 class="card-title">Graphics Design/Printing</h5>
+                            <p class="card-text">Creative graphic design and high-quality printing services for all your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="bi bi-laptop service-icon"></i>
+                            <h5 class="card-title">Computer Education</h5>
+                            <p class="card-text">Comprehensive computer education programs for all skill levels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Section -->
+    <section id="software" class="py-5">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center">Our Software Solutions</h2>
+            <ul class="software-list">
+                <li class="software-item">School Management System: Streamline administrative tasks, student records, and more.</li>
+                <li class="software-item">Hospital Management System: Efficient patient care, billing, and inventory management.</li>
+                <li class="software-item">Inventory Management System: Track stock, orders, and supply chain seamlessly.</li>
+                <li class="software-item">Human Resource Management System: Manage employees, payroll, and performance.</li>
+                <li class="software-item">Church Management System: Organize members, events, and donations effectively.</li>
+                <li class="software-item">Crime Reporting System: For Citizen, Police, and other security entities.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-secondary" style="background-color: #1e1e1e;">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title text-center">Contact Us</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="col-12">
+                    <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p>&copy; 2025 RAW GLOBAL TECH. All rights reserved.</p>
+        <div>
+            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Scroll Animation Script -->
+    <script>
+        const sections = document.querySelectorAll('.animate-on-scroll');
+        const options = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Generate particles for animation
+        const animationContainer = document.querySelector('.hero-animation-container');
+        if (animationContainer) {
+            for (let i = 0; i < 50; i++) { // Increased number of particles
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                const size = Math.random() * 5 + 2; // Size between 2px and 7px
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+
+                // Define random start, mid, and end points for animation
+                const xStart = Math.random() * 100 + 'vw';
+                const yStart = Math.random() * 100 + 'vh';
+                const xMid1 = Math.random() * 100 + 'vw';
+                const yMid1 = Math.random() * 100 + 'vh';
+                const xMid2 = Math.random() * 100 + 'vw';
+                const yMid2 = Math.random() * 100 + 'vh';
+                const xMid3 = Math.random() * 100 + 'vw';
+                const yMid3 = Math.random() * 100 + 'vh';
+                const xEnd = Math.random() * 100 + 'vw';
+                const yEnd = Math.random() * 100 + 'vh';
+
+                particle.style.setProperty('--x-start', xStart);
+                particle.style.setProperty('--y-start', yStart);
+                particle.style.setProperty('--x-mid1', xMid1);
+                particle.style.setProperty('--y-mid1', yMid1);
+                particle.style.setProperty('--x-mid2', xMid2);
+                particle.style.setProperty('--y-mid2', yMid2);
+                particle.style.setProperty('--x-mid3', xMid3);
+                particle.style.setProperty('--y-mid3', yMid3);
+                particle.style.setProperty('--x-end', xEnd);
+                particle.style.setProperty('--y-end', yEnd);
+
+                particle.style.animationDelay = `${Math.random() * 20}s`; // Random delay for staggered animation
+                particle.style.animationDuration = `${Math.random() * 10 + 15}s`; // Random duration
+                animationContainer.appendChild(particle);
+            }
+        }
+    </script>
+</body>
+</html>
