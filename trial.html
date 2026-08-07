@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAW GLOBAL TECH - Innovation Unleashed</title>
+    <title>RAW GLOBAL TECH · Cyber Blue</title>
     
-    <!-- Bootstrap CSS for responsiveness -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
@@ -14,50 +14,42 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     
-    <!-- Font Awesome for additional icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS Animation Library -->
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         /* ============================================================
-           ROOT VARIABLES - COLOR SCHEME
+           ROOT VARIABLES – CYBER BLUE
            ============================================================ */
         :root {
-            --primary-blue: #0d6efd;
-            --primary-dark: #0a58ca;
-            --accent-gold: #ffc107;
-            --accent-gold-light: #ffd700;
-            --bg-dark: #0a0a0a;
-            --bg-dark-secondary: #121212;
-            --bg-card: #1a1a1a;
-            --bg-card-hover: #252525;
-            --text-light: #ffffff;
-            --text-muted: #a0a0a0;
-            --text-dark: #212529;
-            --gradient-primary: linear-gradient(135deg, #0d6efd, #0a58ca, #0d6efd);
-            --gradient-gold: linear-gradient(135deg, #ffc107, #ffd700, #ffc107);
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --shadow-glow: 0 0 30px rgba(13, 110, 253, 0.15);
+            --primary-blue: #00b4d8;
+            --primary-dark: #0077b6;
+            --accent-cyan: #00e5ff;
+            --accent-cyan-light: #72f0ff;
+            --bg-dark: #0a0e1a;
+            --bg-dark-secondary: #0f1a2b;
+            --bg-card: #132236;
+            --bg-card-hover: #1c304a;
+            --text-light: #f0f9ff;
+            --text-muted: #90b4d9;
+            --text-dark: #0a1a2a;
+            --gradient-primary: linear-gradient(135deg, #0077b6, #00b4d8, #00e5ff);
+            --gradient-cyan: linear-gradient(135deg, #00b4d8, #00e5ff, #72f0ff);
+            --glass-bg: rgba(0, 180, 216, 0.08);
+            --glass-border: rgba(0, 229, 255, 0.15);
+            --shadow-glow: 0 0 35px rgba(0, 180, 216, 0.25);
             --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
             --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         /* ============================================================
-           RESET & BASE STYLES
+           RESET & BASE
            ============================================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Roboto', sans-serif;
             background-color: var(--bg-dark);
@@ -66,65 +58,53 @@
         }
 
         /* ============================================================
-           CUSTOM SCROLLBAR
+           CUSTOM SCROLLBAR – cyan
            ============================================================ */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-dark);
-        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
         ::-webkit-scrollbar-thumb {
             background: var(--gradient-primary);
             border-radius: 10px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-gold);
-        }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-cyan); }
 
         /* ============================================================
            NAVBAR
            ============================================================ */
         .navbar {
-            background-color: rgba(10, 10, 10, 0.85);
+            background-color: rgba(10, 14, 26, 0.88);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             transition: var(--transition-smooth);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(0, 229, 255, 0.06);
             padding: 12px 0;
         }
-
         .navbar.scrolled {
-            background-color: rgba(10, 10, 10, 0.98);
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+            background-color: rgba(10, 14, 26, 0.98);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
         }
-
         .navbar-brand {
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
             font-size: 1.8rem;
-            color: var(--accent-gold) !important;
+            color: var(--accent-cyan) !important;
             transition: var(--transition-smooth);
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
         .navbar-brand:hover {
             transform: scale(1.05);
-            color: var(--accent-gold-light) !important;
+            color: var(--accent-cyan-light) !important;
         }
-
         .navbar-brand img {
             height: 50px;
             width: auto;
             transition: var(--transition-smooth);
         }
-
         .navbar-brand img:hover {
             transform: rotate(-5deg) scale(1.05);
         }
-
         .nav-link {
             color: var(--text-light) !important;
             font-weight: 500;
@@ -134,7 +114,6 @@
             position: relative;
             letter-spacing: 0.5px;
         }
-
         .nav-link::after {
             content: '';
             position: absolute;
@@ -142,69 +121,60 @@
             left: 50%;
             width: 0;
             height: 2px;
-            background: var(--gradient-gold);
+            background: var(--gradient-cyan);
             transition: var(--transition-smooth);
             transform: translateX(-50%);
         }
-
         .nav-link:hover::after,
         .nav-link.active::after {
             width: 70%;
         }
-
         .nav-link:hover {
-            color: var(--accent-gold) !important;
+            color: var(--accent-cyan) !important;
             transform: translateY(-2px);
         }
-
         .nav-link.active {
-            color: var(--accent-gold) !important;
+            color: var(--accent-cyan) !important;
         }
-
         .navbar-toggler {
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.15);
             padding: 8px 12px;
             border-radius: 8px;
         }
-
         .navbar-toggler:focus {
-            box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+            box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.25);
         }
-
         .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(240, 249, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
 
         /* ============================================================
-           DROPDOWN MENU
+           DROPDOWN
            ============================================================ */
         .dropdown-menu {
             background: var(--bg-dark-secondary);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.08);
             border-radius: 12px;
             padding: 8px 0;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
-
         .dropdown-item {
             color: var(--text-light);
             padding: 10px 20px;
             transition: var(--transition-smooth);
             font-weight: 400;
         }
-
         .dropdown-item:hover {
-            background: rgba(255, 193, 7, 0.1);
-            color: var(--accent-gold);
+            background: rgba(0, 229, 255, 0.08);
+            color: var(--accent-cyan);
             padding-left: 26px;
         }
-
         .dropdown-divider {
-            border-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(0, 229, 255, 0.06);
         }
 
         /* ============================================================
-           HERO SECTION
+           HERO
            ============================================================ */
         .hero {
             min-height: 100vh;
@@ -217,7 +187,6 @@
             background: var(--bg-dark);
             padding: 80px 0 60px;
         }
-
         .hero-animation-container {
             position: absolute;
             top: 0;
@@ -226,9 +195,8 @@
             height: 100%;
             overflow: hidden;
             z-index: 0;
-            background: radial-gradient(ellipse at center, #0a1a2a, #0a0a0a);
+            background: radial-gradient(ellipse at center, #0a1e30, #0a0e1a);
         }
-
         .hero-animation-container::before {
             content: '';
             position: absolute;
@@ -236,113 +204,77 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(ellipse at 30% 50%, rgba(13, 110, 253, 0.05), transparent 70%);
+            background: radial-gradient(ellipse at 30% 50%, rgba(0, 180, 216, 0.08), transparent 70%);
             z-index: 1;
         }
 
-        /* ============================================================
-           PARTICLE ANIMATION
-           ============================================================ */
+        /* particles */
         .particle {
             position: absolute;
             background: var(--gradient-primary);
             border-radius: 50%;
             opacity: 0;
             animation: particleAnimation 25s infinite ease-in-out;
-            box-shadow: 0 0 15px rgba(13, 110, 253, 0.3);
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
         }
-
         .particle:nth-child(odd) {
-            background: var(--gradient-gold);
-            box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+            background: var(--gradient-cyan);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
         }
-
         @keyframes particleAnimation {
-            0% {
-                transform: translate(var(--x-start), var(--y-start)) scale(0) rotate(0deg);
-                opacity: 0;
-            }
-            20% {
-                opacity: 0.6;
-                transform: translate(var(--x-mid1), var(--y-mid1)) scale(1) rotate(90deg);
-            }
-            40% {
-                opacity: 0.9;
-                transform: translate(var(--x-mid2), var(--y-mid2)) scale(1.3) rotate(180deg);
-            }
-            60% {
-                opacity: 0.7;
-                transform: translate(var(--x-mid3), var(--y-mid3)) scale(0.9) rotate(270deg);
-            }
-            80% {
-                opacity: 0.4;
-                transform: translate(var(--x-mid4), var(--y-mid4)) scale(0.6) rotate(330deg);
-            }
-            100% {
-                transform: translate(var(--x-end), var(--y-end)) scale(0) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: translate(var(--x-start), var(--y-start)) scale(0) rotate(0deg); opacity: 0; }
+            20% { opacity: 0.6; transform: translate(var(--x-mid1), var(--y-mid1)) scale(1) rotate(90deg); }
+            40% { opacity: 0.9; transform: translate(var(--x-mid2), var(--y-mid2)) scale(1.3) rotate(180deg); }
+            60% { opacity: 0.7; transform: translate(var(--x-mid3), var(--y-mid3)) scale(0.9) rotate(270deg); }
+            80% { opacity: 0.4; transform: translate(var(--x-mid4), var(--y-mid4)) scale(0.6) rotate(330deg); }
+            100% { transform: translate(var(--x-end), var(--y-end)) scale(0) rotate(360deg); opacity: 0; }
         }
 
-        /* Floating geometric shapes */
         .floating-shape {
             position: absolute;
             border-radius: 50%;
             opacity: 0.03;
             pointer-events: none;
-            border: 2px solid var(--accent-gold);
+            border: 2px solid var(--accent-cyan);
         }
 
-        /* ============================================================
-           HERO CONTENT
-           ============================================================ */
+        /* hero content */
         .hero-content {
             position: relative;
             z-index: 2;
             animation: fadeInUp 1.2s ease-out;
         }
-
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(60px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+            from { opacity: 0; transform: translateY(60px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
-
         .hero-badge {
             display: inline-block;
             padding: 6px 20px;
-            background: rgba(255, 193, 7, 0.1);
-            border: 1px solid rgba(255, 193, 7, 0.2);
+            background: rgba(0, 229, 255, 0.08);
+            border: 1px solid rgba(0, 229, 255, 0.2);
             border-radius: 50px;
             font-size: 0.85rem;
-            color: var(--accent-gold);
+            color: var(--accent-cyan);
             font-weight: 500;
             margin-bottom: 20px;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-
         .hero h1 {
             font-family: 'Orbitron', sans-serif;
             font-weight: 900;
             font-size: 4.5rem;
             line-height: 1.1;
             margin-bottom: 20px;
-            text-shadow: 0 0 40px rgba(13, 110, 253, 0.1);
+            text-shadow: 0 0 40px rgba(0, 180, 216, 0.15);
         }
-
         .hero h1 .highlight {
-            background: var(--gradient-gold);
+            background: var(--gradient-cyan);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         .hero p {
             font-size: 1.3rem;
             color: var(--text-muted);
@@ -350,7 +282,6 @@
             margin: 0 auto 30px;
             line-height: 1.8;
         }
-
         .hero .btn-group {
             display: flex;
             gap: 15px;
@@ -359,7 +290,7 @@
         }
 
         /* ============================================================
-           BUTTONS
+           BUTTONS – cyan theme
            ============================================================ */
         .btn-primary-custom {
             display: inline-flex;
@@ -378,7 +309,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .btn-primary-custom::before {
             content: '';
             position: absolute;
@@ -386,17 +316,13 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
             transition: var(--transition-smooth);
         }
-
-        .btn-primary-custom:hover::before {
-            left: 100%;
-        }
-
+        .btn-primary-custom:hover::before { left: 100%; }
         .btn-primary-custom:hover {
             transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(13, 110, 253, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 180, 216, 0.4);
             color: #fff;
         }
 
@@ -407,7 +333,7 @@
             padding: 14px 35px;
             background: transparent;
             color: var(--text-light);
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(0, 229, 255, 0.25);
             border-radius: 50px;
             font-weight: 600;
             font-size: 1rem;
@@ -415,22 +341,21 @@
             text-decoration: none;
             letter-spacing: 0.5px;
         }
-
         .btn-outline-custom:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
+            background: rgba(0, 229, 255, 0.05);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
             transform: translateY(-4px);
-            box-shadow: 0 15px 40px rgba(255, 193, 7, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 229, 255, 0.1);
         }
 
-        .btn-gold {
+        .btn-cyan {
             display: inline-flex;
             align-items: center;
             gap: 10px;
             padding: 14px 35px;
-            background: var(--gradient-gold);
-            color: #1a1a1a;
+            background: var(--gradient-cyan);
+            color: #0a0e1a;
             border: none;
             border-radius: 50px;
             font-weight: 700;
@@ -439,35 +364,32 @@
             text-decoration: none;
             letter-spacing: 0.5px;
         }
-
-        .btn-gold:hover {
+        .btn-cyan:hover {
             transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(255, 193, 7, 0.3);
-            color: #1a1a1a;
+            box-shadow: 0 15px 40px rgba(0, 229, 255, 0.35);
+            color: #0a0e1a;
         }
 
         /* ============================================================
-           SECTION TITLES
+           SECTION TITLES – cyan
            ============================================================ */
         .section-title {
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
-            color: var(--accent-gold);
+            color: var(--accent-cyan);
             position: relative;
             margin-bottom: 1.5rem;
             font-size: 2.5rem;
         }
-
         .section-title::after {
             content: '';
             display: block;
             width: 60px;
             height: 3px;
-            background: var(--gradient-gold);
+            background: var(--gradient-cyan);
             margin: 12px auto 0;
             border-radius: 3px;
         }
-
         .section-subtitle {
             color: var(--text-muted);
             font-size: 1.1rem;
@@ -476,34 +398,25 @@
         }
 
         /* ============================================================
-           SECTION BACKGROUNDS
+           SECTIONS
            ============================================================ */
-        .section-dark {
-            background: var(--bg-dark-secondary);
-            padding: 80px 0;
-        }
-
-        .section-darker {
-            background: var(--bg-dark);
-            padding: 80px 0;
-        }
+        .section-dark { background: var(--bg-dark-secondary); padding: 80px 0; }
+        .section-darker { background: var(--bg-dark); padding: 80px 0; }
 
         /* ============================================================
-           ABOUT SECTION
+           ABOUT
            ============================================================ */
         .about-card {
             background: var(--bg-card);
             border-radius: 20px;
             padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.05);
             transition: var(--transition-smooth);
         }
-
         .about-card:hover {
-            border-color: rgba(255, 193, 7, 0.1);
+            border-color: rgba(0, 229, 255, 0.12);
             box-shadow: var(--shadow-glow);
         }
-
         .profile-image-wrapper {
             position: relative;
             width: 280px;
@@ -511,22 +424,19 @@
             margin: 0 auto 25px;
             border-radius: 50%;
             overflow: hidden;
-            border: 4px solid var(--accent-gold);
-            box-shadow: 0 0 40px rgba(255, 193, 7, 0.1);
+            border: 4px solid var(--accent-cyan);
+            box-shadow: 0 0 40px rgba(0, 229, 255, 0.12);
             transition: var(--transition-smooth);
         }
-
         .profile-image-wrapper:hover {
             transform: scale(1.03);
-            box-shadow: 0 0 60px rgba(255, 193, 7, 0.2);
+            box-shadow: 0 0 60px rgba(0, 229, 255, 0.2);
         }
-
         .profile-image-wrapper img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .profile-image-wrapper .default-avatar {
             width: 100%;
             height: 100%;
@@ -537,62 +447,46 @@
             font-size: 100px;
             color: #fff;
         }
-
         .profile-name {
             font-family: 'Playfair Display', serif;
             font-size: 2.2rem;
             color: var(--text-light);
             margin-bottom: 5px;
         }
-
         .profile-title {
-            color: var(--accent-gold);
+            color: var(--accent-cyan);
             font-weight: 500;
             font-size: 1.1rem;
             margin-bottom: 15px;
         }
-
         .profile-bio {
             color: var(--text-muted);
             line-height: 1.8;
             font-size: 0.95rem;
         }
-
         .qualification-item {
             display: flex;
             align-items: flex-start;
             gap: 12px;
             padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(0, 229, 255, 0.04);
         }
-
-        .qualification-item:last-child {
-            border-bottom: none;
-        }
-
+        .qualification-item:last-child { border-bottom: none; }
         .qualification-item i {
-            color: var(--accent-gold);
+            color: var(--accent-cyan);
             font-size: 1.2rem;
             margin-top: 2px;
             min-width: 24px;
         }
-
-        .qualification-item .q-title {
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .qualification-item .q-desc {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
+        .qualification-item .q-title { color: var(--text-light); font-weight: 500; }
+        .qualification-item .q-desc { color: var(--text-muted); font-size: 0.9rem; }
 
         /* ============================================================
-           SERVICES SECTION
+           SERVICES
            ============================================================ */
         .service-card {
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(0, 229, 255, 0.04);
             border-radius: 16px;
             padding: 35px 25px;
             text-align: center;
@@ -601,7 +495,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .service-card::before {
             content: '';
             position: absolute;
@@ -613,17 +506,12 @@
             transform: scaleX(0);
             transition: var(--transition-smooth);
         }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
+        .service-card:hover::before { transform: scaleX(1); }
         .service-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(255, 193, 7, 0.1);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 229, 255, 0.12);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
         }
-
         .service-icon {
             font-size: 3.5rem;
             margin-bottom: 1.2rem;
@@ -634,115 +522,82 @@
             background-clip: text;
             transition: var(--transition-smooth);
         }
-
         .service-card:hover .service-icon {
-            background: var(--gradient-gold);
+            background: var(--gradient-cyan);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             transform: scale(1.1) rotate(-5deg);
         }
-
-        .service-card h5 {
-            color: var(--text-light);
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 0;
-        }
-
+        .service-card h5 { color: var(--text-light); font-weight: 700; font-size: 1.2rem; margin-bottom: 10px; }
+        .service-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; }
         .service-card .service-number {
             position: absolute;
             top: 10px;
             right: 15px;
             font-size: 3rem;
             font-weight: 900;
-            color: rgba(255, 255, 255, 0.02);
+            color: rgba(0, 229, 255, 0.03);
             font-family: 'Orbitron', sans-serif;
             pointer-events: none;
         }
 
         /* ============================================================
-           SOFTWARE SECTION
+           SOFTWARE
            ============================================================ */
         .software-item {
             background: var(--bg-card);
             padding: 18px 25px;
             margin-bottom: 12px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 229, 255, 0.04);
             transition: var(--transition-smooth);
             display: flex;
             align-items: center;
             gap: 15px;
             cursor: default;
         }
-
         .software-item:hover {
             background: var(--bg-card-hover);
-            border-color: rgba(255, 193, 7, 0.1);
+            border-color: rgba(0, 229, 255, 0.12);
             transform: translateX(8px);
         }
-
         .software-item .s-icon {
-            color: var(--accent-gold);
+            color: var(--accent-cyan);
             font-size: 1.5rem;
             min-width: 40px;
             text-align: center;
         }
-
-        .software-item .s-content {
-            flex: 1;
-        }
-
-        .software-item .s-title {
-            color: var(--text-light);
-            font-weight: 600;
-            font-size: 1.05rem;
-            margin-bottom: 2px;
-        }
-
-        .software-item .s-desc {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
+        .software-item .s-content { flex: 1; }
+        .software-item .s-title { color: var(--text-light); font-weight: 600; font-size: 1.05rem; margin-bottom: 2px; }
+        .software-item .s-desc { color: var(--text-muted); font-size: 0.9rem; }
         .software-item .s-arrow {
-            color: var(--accent-gold);
+            color: var(--accent-cyan);
             opacity: 0;
             transition: var(--transition-smooth);
             font-size: 1.2rem;
         }
-
         .software-item:hover .s-arrow {
             opacity: 1;
             transform: translateX(5px);
         }
 
         /* ============================================================
-           CONTACT SECTION
+           CONTACT
            ============================================================ */
         .contact-info-card {
             background: var(--bg-card);
             border-radius: 16px;
             padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.05);
             transition: var(--transition-smooth);
             height: 100%;
         }
-
         .contact-info-card:hover {
-            border-color: rgba(255, 193, 7, 0.1);
+            border-color: rgba(0, 229, 255, 0.12);
             transform: translateY(-5px);
             box-shadow: var(--shadow-glow);
         }
-
         .contact-info-card .contact-icon {
             width: 60px;
             height: 60px;
@@ -750,107 +605,62 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(13, 110, 253, 0.1);
-            color: var(--accent-gold);
+            background: rgba(0, 180, 216, 0.12);
+            color: var(--accent-cyan);
             font-size: 1.8rem;
             margin-bottom: 15px;
             transition: var(--transition-smooth);
         }
-
         .contact-info-card:hover .contact-icon {
-            background: rgba(255, 193, 7, 0.1);
+            background: rgba(0, 229, 255, 0.12);
             transform: scale(1.1) rotate(-10deg);
         }
+        .contact-info-card h6 { color: var(--text-light); font-weight: 600; font-size: 1rem; margin-bottom: 5px; }
+        .contact-info-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0; }
+        .contact-info-card a { color: var(--text-muted); text-decoration: none; transition: var(--transition-smooth); }
+        .contact-info-card a:hover { color: var(--accent-cyan); }
 
-        .contact-info-card h6 {
-            color: var(--text-light);
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 5px;
-        }
-
-        .contact-info-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        .contact-info-card a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: var(--transition-smooth);
-        }
-
-        .contact-info-card a:hover {
-            color: var(--accent-gold);
-        }
-
-        /* ============================================================
-           CONTACT FORM
-           ============================================================ */
         .contact-form {
             background: var(--bg-card);
             border-radius: 20px;
             padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.05);
         }
-
         .contact-form .form-control {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(0, 229, 255, 0.04);
+            border: 1px solid rgba(0, 229, 255, 0.06);
             color: var(--text-light);
             border-radius: 12px;
             padding: 14px 18px;
             transition: var(--transition-smooth);
             font-size: 0.95rem;
         }
-
         .contact-form .form-control:focus {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.06);
+            background: rgba(0, 229, 255, 0.06);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.08);
             color: var(--text-light);
         }
-
-        .contact-form .form-control::placeholder {
-            color: var(--text-muted);
-        }
-
-        .contact-form .form-label {
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 6px;
-        }
-
-        .contact-form textarea.form-control {
-            resize: vertical;
-            min-height: 120px;
-        }
+        .contact-form .form-control::placeholder { color: var(--text-muted); }
+        .contact-form .form-label { color: var(--text-secondary); font-weight: 500; font-size: 0.9rem; margin-bottom: 6px; }
+        .contact-form textarea.form-control { resize: vertical; min-height: 120px; }
 
         /* ============================================================
            FOOTER
            ============================================================ */
         .footer {
-            background: #060606;
+            background: #060a12;
             padding: 50px 0 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(0, 229, 255, 0.04);
         }
-
         .footer-brand {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.5rem;
-            color: var(--accent-gold);
+            color: var(--accent-cyan);
             font-weight: 700;
             margin-bottom: 10px;
         }
-
-        .footer p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
+        .footer p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 5px; }
         .social-link {
             display: inline-flex;
             align-items: center;
@@ -858,21 +668,19 @@
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(0, 229, 255, 0.04);
             color: var(--text-light);
             font-size: 1.2rem;
             transition: var(--transition-bounce);
             text-decoration: none;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.06);
         }
-
         .social-link:hover {
-            background: var(--gradient-gold);
-            color: #1a1a1a;
+            background: var(--gradient-cyan);
+            color: #0a0e1a;
             transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 229, 255, 0.25);
         }
-
         .footer-links a {
             color: var(--text-muted);
             text-decoration: none;
@@ -881,148 +689,56 @@
             display: inline-block;
             margin: 0 10px;
         }
-
-        .footer-links a:hover {
-            color: var(--accent-gold);
-            transform: translateX(3px);
-        }
+        .footer-links a:hover { color: var(--accent-cyan); transform: translateX(3px); }
 
         /* ============================================================
-           RESPONSIVE STYLES
+           RESPONSIVE
            ============================================================ */
         @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-            .hero p {
-                font-size: 1.1rem;
-            }
-            .section-title {
-                font-size: 2.2rem;
-            }
-            .profile-image-wrapper {
-                width: 220px;
-                height: 220px;
-            }
+            .hero h1 { font-size: 3.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .section-title { font-size: 2.2rem; }
+            .profile-image-wrapper { width: 220px; height: 220px; }
         }
-
         @media (max-width: 768px) {
-            .hero {
-                min-height: 90vh;
-                padding: 100px 0 40px;
+            .hero { min-height: 90vh; padding: 100px 0 40px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1rem; padding: 0 15px; }
+            .hero .btn-group { flex-direction: column; align-items: center; gap: 12px; }
+            .btn-primary-custom, .btn-outline-custom, .btn-cyan {
+                width: 100%; justify-content: center; padding: 12px 25px; font-size: 0.95rem;
             }
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .hero p {
-                font-size: 1rem;
-                padding: 0 15px;
-            }
-            .hero .btn-group {
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-            }
-            .btn-primary-custom,
-            .btn-outline-custom,
-            .btn-gold {
-                width: 100%;
-                justify-content: center;
-                padding: 12px 25px;
-                font-size: 0.95rem;
-            }
-            .section-title {
-                font-size: 1.8rem;
-            }
-            .section-subtitle {
-                font-size: 0.95rem;
-                padding: 0 15px;
-            }
-            .profile-image-wrapper {
-                width: 180px;
-                height: 180px;
-            }
-            .profile-name {
-                font-size: 1.8rem;
-            }
-            .about-card {
-                padding: 25px;
-            }
-            .service-card {
-                padding: 25px 20px;
-            }
-            .contact-form {
-                padding: 25px;
-            }
-            .software-item {
-                flex-wrap: wrap;
-                padding: 15px 18px;
-            }
-            .software-item .s-arrow {
-                opacity: 1;
-                margin-left: auto;
-            }
-            .footer-links a {
-                display: block;
-                margin: 5px 0;
-            }
-            .navbar-brand {
-                font-size: 1.3rem;
-            }
-            .navbar-brand img {
-                height: 40px;
-            }
+            .section-title { font-size: 1.8rem; }
+            .section-subtitle { font-size: 0.95rem; padding: 0 15px; }
+            .profile-image-wrapper { width: 180px; height: 180px; }
+            .profile-name { font-size: 1.8rem; }
+            .about-card { padding: 25px; }
+            .service-card { padding: 25px 20px; }
+            .contact-form { padding: 25px; }
+            .software-item { flex-wrap: wrap; padding: 15px 18px; }
+            .software-item .s-arrow { opacity: 1; margin-left: auto; }
+            .footer-links a { display: block; margin: 5px 0; }
+            .navbar-brand { font-size: 1.3rem; }
+            .navbar-brand img { height: 40px; }
         }
-
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .hero .hero-badge {
-                font-size: 0.7rem;
-                padding: 4px 14px;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            .profile-image-wrapper {
-                width: 150px;
-                height: 150px;
-            }
-            .profile-name {
-                font-size: 1.5rem;
-            }
-            .stat-card {
-                padding: 15px;
-            }
-            .contact-info-card {
-                padding: 20px;
-            }
-            .service-card .service-number {
-                font-size: 2rem;
-            }
-            .social-link {
-                width: 38px;
-                height: 38px;
-                font-size: 1rem;
-            }
+            .hero h1 { font-size: 2rem; }
+            .hero .hero-badge { font-size: 0.7rem; padding: 4px 14px; }
+            .section-title { font-size: 1.5rem; }
+            .profile-image-wrapper { width: 150px; height: 150px; }
+            .profile-name { font-size: 1.5rem; }
+            .contact-info-card { padding: 20px; }
+            .service-card .service-number { font-size: 2rem; }
+            .social-link { width: 38px; height: 38px; font-size: 1rem; }
         }
 
         /* ============================================================
-           UTILITY CLASSES
+           UTILITIES
            ============================================================ */
-        .text-gold {
-            color: var(--accent-gold);
-        }
-        .text-gold-light {
-            color: var(--accent-gold-light);
-        }
-        .bg-gradient-primary {
-            background: var(--gradient-primary);
-        }
-        .bg-gradient-gold {
-            background: var(--gradient-gold);
-        }
+        .text-cyan { color: var(--accent-cyan); }
+        .text-cyan-light { color: var(--accent-cyan-light); }
+        .bg-gradient-primary { background: var(--gradient-primary); }
+        .bg-gradient-cyan { background: var(--gradient-cyan); }
         .glass-effect {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -1030,52 +746,18 @@
             border: 1px solid var(--glass-border);
         }
 
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+        .animate-on-scroll { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+        .animate-on-scroll-left { opacity: 0; transform: translateX(-50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .animate-on-scroll-left.visible { opacity: 1; transform: translateX(0); }
+        .animate-on-scroll-right { opacity: 0; transform: translateX(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .animate-on-scroll-right.visible { opacity: 1; transform: translateX(0); }
 
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .animate-on-scroll-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .animate-on-scroll-left.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .animate-on-scroll-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .animate-on-scroll-right.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* ============================================================
-           SUCCESS/ERROR TOAST
-           ============================================================ */
-        .toast-container {
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            z-index: 9999;
-        }
-
+        /* toast */
+        .toast-container { position: fixed; top: 80px; right: 20px; z-index: 9999; }
         .toast-custom {
             background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.1);
             border-radius: 12px;
             padding: 16px 24px;
             color: var(--text-light);
@@ -1083,28 +765,11 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             animation: slideInRight 0.5s ease;
         }
-
-        .toast-custom.success {
-            border-left: 4px solid #10b981;
-        }
-
-        .toast-custom.error {
-            border-left: 4px solid #ef4444;
-        }
-
-        .toast-custom .toast-icon {
-            font-size: 1.5rem;
-            margin-right: 12px;
-        }
-
-        .toast-custom.success .toast-icon {
-            color: #10b981;
-        }
-
-        .toast-custom.error .toast-icon {
-            color: #ef4444;
-        }
-
+        .toast-custom.success { border-left: 4px solid #00e5ff; }
+        .toast-custom.error { border-left: 4px solid #ff6b6b; }
+        .toast-custom .toast-icon { font-size: 1.5rem; margin-right: 12px; }
+        .toast-custom.success .toast-icon { color: #00e5ff; }
+        .toast-custom.error .toast-icon { color: #ff6b6b; }
         .toast-custom .toast-close {
             cursor: pointer;
             background: none;
@@ -1114,31 +779,14 @@
             padding: 0 5px;
             transition: var(--transition-smooth);
         }
-
-        .toast-custom .toast-close:hover {
-            color: var(--text-light);
-        }
-
+        .toast-custom .toast-close:hover { color: var(--text-light); }
         @keyframes slideInRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
-
         @keyframes slideOutRight {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(100%);
-                opacity: 0;
-            }
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
         }
     </style>
 </head>
@@ -1150,8 +798,7 @@
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <!-- Logo Image - Replace with your actual logo -->
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%231a1a1a' rx='8'/%3E%3Ctext x='50' y='32' text-anchor='middle' font-family='Orbitron' font-weight='700' font-size='20' fill='%23ffc107'%3ERGT%3C/text%3E%3C/svg%3E" alt="RAW GLOBAL TECH Logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%230a0e1a' rx='8'/%3E%3Ctext x='50' y='32' text-anchor='middle' font-family='Orbitron' font-weight='700' font-size='20' fill='%2300e5ff'%3ERGT%3C/text%3E%3C/svg%3E" alt="RAW GLOBAL TECH">
                 RAW GLOBAL TECH
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -1181,13 +828,10 @@
     </nav>
 
     <!-- ============================================================
-    HERO SECTION
+    HERO
     ============================================================ -->
     <section id="home" class="hero">
-        <!-- Particle Animation Container -->
         <div class="hero-animation-container" id="particleContainer"></div>
-        
-        <!-- Hero Content -->
         <div class="hero-content">
             <span class="hero-badge"><i class="fas fa-rocket me-2"></i>Innovation Unleashed</span>
             <h1>
@@ -1207,142 +851,100 @@
     </section>
 
     <!-- ============================================================
-    ABOUT SECTION - Featuring Richard
+    ABOUT
     ============================================================ -->
     <section id="about" class="section-darker">
         <div class="container">
-            <!-- Section Header -->
             <div class="text-center" data-aos="fade-up">
                 <h2 class="section-title">About RAW GLOBAL TECH</h2>
                 <p class="section-subtitle">We are a team of passionate IT professionals dedicated to delivering innovative solutions that drive business growth and digital transformation.</p>
             </div>
-
             <div class="row g-4 align-items-center">
-                <!-- Left Column: Richard's Profile -->
                 <div class="col-lg-5" data-aos="fade-right">
                     <div class="about-card text-center">
                         <div class="profile-image-wrapper">
-                            <!-- Default Avatar - Replace src with actual image when available -->
                             <div class="default-avatar">
                                 <i class="fas fa-user-circle"></i>
                             </div>
-                            <!-- Uncomment below and comment above when you have an actual image -->
-                            <!-- <img src="img/richard.jpg" alt="Richard - Founder & CEO"> -->
                         </div>
                         <h3 class="profile-name">Richard</h3>
                         <div class="profile-title">Founder &amp; CEO | IT Solutions Architect</div>
                         <p class="profile-bio">
                             Richard is a visionary leader with over 15 years of experience in the IT industry. 
                             He founded RAW GLOBAL TECH with a mission to democratize technology and make innovative 
-                            IT solutions accessible to businesses of all sizes. His passion for technology and 
-                            commitment to excellence drives the company's success.
+                            IT solutions accessible to businesses of all sizes.
                         </p>
-                        
-                        <!-- Qualifications -->
                         <div class="mt-4 text-start">
-                            <h6 class="text-gold mb-3"><i class="fas fa-graduation-cap me-2"></i>Qualifications &amp; Expertise</h6>
+                            <h6 class="text-cyan mb-3"><i class="fas fa-graduation-cap me-2"></i>Qualifications &amp; Expertise</h6>
                             <div class="qualification-item">
                                 <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <div class="q-title">MSc. Computer Science</div>
-                                    <div class="q-desc">Stanford University - Specializing in AI &amp; Machine Learning</div>
-                                </div>
+                                <div><div class="q-title">MSc. Computer Science</div><div class="q-desc">Stanford University - AI &amp; Machine Learning</div></div>
                             </div>
                             <div class="qualification-item">
                                 <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <div class="q-title">BSc. Information Technology</div>
-                                    <div class="q-desc">Massachusetts Institute of Technology (MIT)</div>
-                                </div>
+                                <div><div class="q-title">BSc. Information Technology</div><div class="q-desc">Massachusetts Institute of Technology (MIT)</div></div>
                             </div>
                             <div class="qualification-item">
                                 <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <div class="q-title">Certified Cloud Architect</div>
-                                    <div class="q-desc">AWS, Microsoft Azure, Google Cloud Platform</div>
-                                </div>
+                                <div><div class="q-title">Certified Cloud Architect</div><div class="q-desc">AWS, Microsoft Azure, Google Cloud</div></div>
                             </div>
                             <div class="qualification-item">
                                 <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <div class="q-title">Project Management Professional (PMP)</div>
-                                    <div class="q-desc">PMI Certified - 10+ Years Experience</div>
-                                </div>
+                                <div><div class="q-title">Project Management Professional (PMP)</div><div class="q-desc">PMI Certified - 10+ Years</div></div>
                             </div>
                             <div class="qualification-item">
                                 <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <div class="q-title">Full-Stack Development</div>
-                                    <div class="q-desc">Python, PHP, JavaScript, React, Node.js, Laravel</div>
-                                </div>
+                                <div><div class="q-title">Full-Stack Development</div><div class="q-desc">Python, PHP, JavaScript, React, Node.js, Laravel</div></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Right Column: Company Info -->
                 <div class="col-lg-7" data-aos="fade-left">
                     <div class="about-card">
-                        <h4 class="text-gold mb-3"><i class="fas fa-building me-2"></i>Who We Are</h4>
+                        <h4 class="text-cyan mb-3"><i class="fas fa-building me-2"></i>Who We Are</h4>
                         <p class="profile-bio">
                             RAW GLOBAL TECH is a leading provider of comprehensive IT solutions, specializing in 
                             sales, development, maintenance, consulting, and installations of IT equipment, software, 
-                            websites, and printing press services. We are committed to unleashing innovation and 
-                            driving business transformation through technology.
+                            websites, and printing press services.
                         </p>
-
                         <div class="row g-3 mt-3">
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3 p-3" style="background:rgba(255,255,255,0.02);border-radius:12px;">
-                                    <i class="fas fa-users text-gold" style="font-size:2rem;"></i>
-                                    <div>
-                                        <div style="font-size:1.5rem;font-weight:700;color:var(--text-light);">50+</div>
-                                        <div style="color:var(--text-muted);font-size:0.9rem;">Happy Clients</div>
-                                    </div>
+                                <div class="d-flex align-items-center gap-3 p-3" style="background:rgba(0,229,255,0.03);border-radius:12px;">
+                                    <i class="fas fa-users text-cyan" style="font-size:2rem;"></i>
+                                    <div><div style="font-size:1.5rem;font-weight:700;color:var(--text-light);">50+</div><div style="color:var(--text-muted);font-size:0.9rem;">Happy Clients</div></div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3 p-3" style="background:rgba(255,255,255,0.02);border-radius:12px;">
-                                    <i class="fas fa-code text-gold" style="font-size:2rem;"></i>
-                                    <div>
-                                        <div style="font-size:1.5rem;font-weight:700;color:var(--text-light);">100+</div>
-                                        <div style="color:var(--text-muted);font-size:0.9rem;">Projects Delivered</div>
-                                    </div>
+                                <div class="d-flex align-items-center gap-3 p-3" style="background:rgba(0,229,255,0.03);border-radius:12px;">
+                                    <i class="fas fa-code text-cyan" style="font-size:2rem;"></i>
+                                    <div><div style="font-size:1.5rem;font-weight:700;color:var(--text-light);">100+</div><div style="color:var(--text-muted);font-size:0.9rem;">Projects Delivered</div></div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3 p-3" style="background:rgba(255,255,255,0.02);border-radius:12px;">
-                                    <i class="fas fa-globe text-gold" style="font-size:2rem;"></i>
-                                    <div>
-                                        <div style="font-size:1.5rem;font-weight:700;color:var(--text-light);">12+</div>
-                                        <div style="color:var(--text-muted);font-size:0.9rem;">Countries Served</div>
-                                    </div>
+                                <div class="d-flex align-items-center gap-3 p-3" style="background:rgba(0,229,255,0.03);border-radius:12px;">
+                                    <i class="fas fa-globe text-cyan" style="font-size:2rem;"></i>
+                                    <div><div style="font-size:1.5rem;font-weight:700;color:var(--text-light);">12+</div><div style="color:var(--text-muted);font-size:0.9rem;">Countries Served</div></div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3 p-3" style="background:rgba(255,255,255,0.02);border-radius:12px;">
-                                    <i class="fas fa-award text-gold" style="font-size:2rem;"></i>
-                                    <div>
-                                        <div style="font-size:1.5rem;font-weight:700;color:var(--text-light);">15+</div>
-                                        <div style="color:var(--text-muted);font-size:0.9rem;">Industry Awards</div>
-                                    </div>
+                                <div class="d-flex align-items-center gap-3 p-3" style="background:rgba(0,229,255,0.03);border-radius:12px;">
+                                    <i class="fas fa-award text-cyan" style="font-size:2rem;"></i>
+                                    <div><div style="font-size:1.5rem;font-weight:700;color:var(--text-light);">15+</div><div style="color:var(--text-muted);font-size:0.9rem;">Industry Awards</div></div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Mission & Vision -->
                         <div class="row g-3 mt-3">
                             <div class="col-md-6">
-                                <div style="background:rgba(255,193,7,0.04);border-radius:12px;padding:16px;border-left:3px solid var(--accent-gold);">
-                                    <h6 class="text-gold"><i class="fas fa-bullseye me-2"></i>Our Mission</h6>
+                                <div style="background:rgba(0,229,255,0.04);border-radius:12px;padding:16px;border-left:3px solid var(--accent-cyan);">
+                                    <h6 class="text-cyan"><i class="fas fa-bullseye me-2"></i>Our Mission</h6>
                                     <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:0;">
                                         To deliver innovative and reliable IT solutions that empower businesses to achieve their goals and drive digital transformation.
                                     </p>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div style="background:rgba(255,193,7,0.04);border-radius:12px;padding:16px;border-left:3px solid var(--accent-gold);">
-                                    <h6 class="text-gold"><i class="fas fa-eye me-2"></i>Our Vision</h6>
+                                <div style="background:rgba(0,229,255,0.04);border-radius:12px;padding:16px;border-left:3px solid var(--accent-cyan);">
+                                    <h6 class="text-cyan"><i class="fas fa-eye me-2"></i>Our Vision</h6>
                                     <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:0;">
                                         To be the leading technology partner in Africa, recognized for excellence, innovation, and commitment to client success.
                                     </p>
@@ -1356,19 +958,15 @@
     </section>
 
     <!-- ============================================================
-    SERVICES SECTION
+    SERVICES
     ============================================================ -->
     <section id="services" class="section-dark">
         <div class="container">
-            <!-- Section Header -->
             <div class="text-center" data-aos="fade-up">
                 <h2 class="section-title">Our Services</h2>
                 <p class="section-subtitle">Comprehensive IT solutions tailored to meet your business needs and drive digital excellence.</p>
             </div>
-
-            <!-- Services Grid -->
             <div class="row g-4">
-                <!-- Service 1: Sales -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card">
                         <span class="service-number">01</span>
@@ -1377,8 +975,6 @@
                         <p>High-quality IT equipment and hardware solutions tailored to your business requirements.</p>
                     </div>
                 </div>
-
-                <!-- Service 2: Development -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card">
                         <span class="service-number">02</span>
@@ -1387,8 +983,6 @@
                         <p>Custom software and web application development for modern businesses and organizations.</p>
                     </div>
                 </div>
-
-                <!-- Service 3: Maintenance -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card">
                         <span class="service-number">03</span>
@@ -1397,8 +991,6 @@
                         <p>Reliable maintenance and support services to keep your systems running smoothly.</p>
                     </div>
                 </div>
-
-                <!-- Service 4: Consulting -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-card">
                         <span class="service-number">04</span>
@@ -1407,8 +999,6 @@
                         <p>Expert advice and strategic guidance to optimize your IT infrastructure and digital strategies.</p>
                     </div>
                 </div>
-
-                <!-- Service 5: Installations -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-card">
                         <span class="service-number">05</span>
@@ -1417,8 +1007,6 @@
                         <p>Professional installation of IT equipment, networks, and software systems.</p>
                     </div>
                 </div>
-
-                <!-- Service 6: Graphics & Printing -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
                     <div class="service-card">
                         <span class="service-number">06</span>
@@ -1427,8 +1015,6 @@
                         <p>Creative graphic design and high-quality printing services for all your branding needs.</p>
                     </div>
                 </div>
-
-                <!-- Service 7: Computer Education -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="700">
                     <div class="service-card">
                         <span class="service-number">07</span>
@@ -1437,8 +1023,6 @@
                         <p>Comprehensive computer education and training programs for all skill levels.</p>
                     </div>
                 </div>
-
-                <!-- Service 8: Web Development -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="800">
                     <div class="service-card">
                         <span class="service-number">08</span>
@@ -1447,8 +1031,6 @@
                         <p>Professional website design, development, and hosting services for businesses and organizations.</p>
                     </div>
                 </div>
-
-                <!-- Service 9: Security Solutions -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="900">
                     <div class="service-card">
                         <span class="service-number">09</span>
@@ -1462,19 +1044,16 @@
     </section>
 
     <!-- ============================================================
-    SOFTWARE SOLUTIONS SECTION
+    SOFTWARE
     ============================================================ -->
     <section id="software" class="section-darker">
         <div class="container">
-            <!-- Section Header -->
             <div class="text-center" data-aos="fade-up">
                 <h2 class="section-title">Our Software Solutions</h2>
                 <p class="section-subtitle">Innovative software solutions designed to streamline operations and enhance productivity across various industries.</p>
             </div>
-
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <!-- Software List -->
                     <div class="software-item" data-aos="fade-up" data-aos-delay="100">
                         <div class="s-icon"><i class="fas fa-school"></i></div>
                         <div class="s-content">
@@ -1483,7 +1062,6 @@
                         </div>
                         <div class="s-arrow"><i class="fas fa-chevron-right"></i></div>
                     </div>
-
                     <div class="software-item" data-aos="fade-up" data-aos-delay="150">
                         <div class="s-icon"><i class="fas fa-hospital"></i></div>
                         <div class="s-content">
@@ -1492,7 +1070,6 @@
                         </div>
                         <div class="s-arrow"><i class="fas fa-chevron-right"></i></div>
                     </div>
-
                     <div class="software-item" data-aos="fade-up" data-aos-delay="200">
                         <div class="s-icon"><i class="fas fa-boxes"></i></div>
                         <div class="s-content">
@@ -1501,7 +1078,6 @@
                         </div>
                         <div class="s-arrow"><i class="fas fa-chevron-right"></i></div>
                     </div>
-
                     <div class="software-item" data-aos="fade-up" data-aos-delay="250">
                         <div class="s-icon"><i class="fas fa-users"></i></div>
                         <div class="s-content">
@@ -1510,7 +1086,6 @@
                         </div>
                         <div class="s-arrow"><i class="fas fa-chevron-right"></i></div>
                     </div>
-
                     <div class="software-item" data-aos="fade-up" data-aos-delay="300">
                         <div class="s-icon"><i class="fas fa-church"></i></div>
                         <div class="s-content">
@@ -1519,7 +1094,6 @@
                         </div>
                         <div class="s-arrow"><i class="fas fa-chevron-right"></i></div>
                     </div>
-
                     <div class="software-item" data-aos="fade-up" data-aos-delay="350">
                         <div class="s-icon"><i class="fas fa-shield-virus"></i></div>
                         <div class="s-content">
@@ -1528,7 +1102,6 @@
                         </div>
                         <div class="s-arrow"><i class="fas fa-chevron-right"></i></div>
                     </div>
-
                     <div class="software-item" data-aos="fade-up" data-aos-delay="400">
                         <div class="s-icon"><i class="fas fa-store"></i></div>
                         <div class="s-content">
@@ -1543,76 +1116,55 @@
     </section>
 
     <!-- ============================================================
-    CONTACT SECTION
+    CONTACT
     ============================================================ -->
     <section id="contact" class="section-dark">
         <div class="container">
-            <!-- Section Header -->
             <div class="text-center" data-aos="fade-up">
                 <h2 class="section-title">Get In Touch</h2>
                 <p class="section-subtitle">Have a project in mind or need IT solutions? Reach out to us and let's bring your ideas to life.</p>
             </div>
-
             <div class="row g-4">
-                <!-- Contact Information -->
                 <div class="col-lg-5" data-aos="fade-right">
                     <div class="row g-3">
                         <div class="col-md-6 col-lg-12">
                             <div class="contact-info-card">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                                 <h6>Office Location</h6>
                                 <p>RAW GLOBAL TECH,<br>Liberia</p>
                             </div>
                         </div>
-
                         <div class="col-md-6 col-lg-12">
                             <div class="contact-info-card">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
                                 <h6>Phone / WhatsApp</h6>
-                                <p>
-                                    <a href="tel:+231555806349">+231 555 806 349</a>
-                                </p>
+                                <p><a href="tel:+231555806349">+231 555 806 349</a></p>
                             </div>
                         </div>
-
                         <div class="col-md-6 col-lg-12">
                             <div class="contact-info-card">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                                 <h6>Email Address</h6>
-                                <p>
-                                    <a href="mailto:edmonddennis100@gmail.com">edmonddennis100@gmail.com</a>
-                                </p>
+                                <p><a href="mailto:edmonddennis100@gmail.com">edmonddennis100@gmail.com</a></p>
                             </div>
                         </div>
-
                         <div class="col-md-6 col-lg-12">
                             <div class="contact-info-card">
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
+                                <div class="contact-icon"><i class="fas fa-clock"></i></div>
                                 <h6>Working Hours</h6>
                                 <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Contact Form -->
                 <div class="col-lg-7" data-aos="fade-left">
                     <div class="contact-form">
-                        <h4 class="text-gold mb-4" style="font-family:'Orbitron',sans-serif;">
+                        <h4 class="text-cyan mb-4" style="font-family:'Orbitron',sans-serif;">
                             <i class="fas fa-paper-plane me-2"></i>Send a Message
                         </h4>
                         <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:25px;">
                             Fill in the form below and we'll get back to you as soon as possible.
                         </p>
-                        
                         <form id="contactForm" onsubmit="return handleContactForm(event)">
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -1636,7 +1188,7 @@
                                     <textarea class="form-control" id="contactMessage" rows="5" placeholder="Describe your project or inquiry in detail..." required></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn-gold w-100" id="submitBtn">
+                                    <button type="submit" class="btn-cyan w-100" id="submitBtn">
                                         <i class="fas fa-paper-plane me-2"></i>Send Message
                                         <span class="spinner-border spinner-border-sm d-none" role="status" id="sendSpinner"></span>
                                     </button>
@@ -1691,59 +1243,36 @@
     </footer>
 
     <!-- ============================================================
-    TOAST CONTAINER FOR NOTIFICATIONS
+    TOAST
     ============================================================ -->
     <div class="toast-container" id="toastContainer"></div>
 
     <!-- ============================================================
     SCRIPTS
     ============================================================ -->
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
     <script>
-        // ============================================================
-        // INITIALIZE AOS ANIMATIONS
-        // ============================================================
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 100
-        });
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true, offset: 100 });
 
-        // ============================================================
-        // NAVBAR SCROLL EFFECT
-        // ============================================================
+        // navbar scroll
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('mainNav');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
         });
 
-        // ============================================================
-        // PARTICLES GENERATION FOR HERO BACKGROUND
-        // ============================================================
+        // particles
         function generateParticles() {
             const container = document.getElementById('particleContainer');
             if (!container) return;
-
-            const particleCount = 70;
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
+            const count = 70;
+            for (let i = 0; i < count; i++) {
+                const p = document.createElement('div');
+                p.classList.add('particle');
                 const size = Math.random() * 6 + 2;
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-
-                // Generate random positions for the animation path
+                p.style.width = size + 'px';
+                p.style.height = size + 'px';
                 const xStart = Math.random() * 100 + 'vw';
                 const yStart = Math.random() * 100 + 'vh';
                 const xMid1 = Math.random() * 100 + 'vw';
@@ -1756,46 +1285,34 @@
                 const yMid4 = Math.random() * 100 + 'vh';
                 const xEnd = Math.random() * 100 + 'vw';
                 const yEnd = Math.random() * 100 + 'vh';
-
-                // Set CSS custom properties for animation
-                particle.style.setProperty('--x-start', xStart);
-                particle.style.setProperty('--y-start', yStart);
-                particle.style.setProperty('--x-mid1', xMid1);
-                particle.style.setProperty('--y-mid1', yMid1);
-                particle.style.setProperty('--x-mid2', xMid2);
-                particle.style.setProperty('--y-mid2', yMid2);
-                particle.style.setProperty('--x-mid3', xMid3);
-                particle.style.setProperty('--y-mid3', yMid3);
-                particle.style.setProperty('--x-mid4', xMid4);
-                particle.style.setProperty('--y-mid4', yMid4);
-                particle.style.setProperty('--x-end', xEnd);
-                particle.style.setProperty('--y-end', yEnd);
-
-                // Random delays and durations for organic feel
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 15 + 20) + 's';
-
-                container.appendChild(particle);
+                p.style.setProperty('--x-start', xStart);
+                p.style.setProperty('--y-start', yStart);
+                p.style.setProperty('--x-mid1', xMid1);
+                p.style.setProperty('--y-mid1', yMid1);
+                p.style.setProperty('--x-mid2', xMid2);
+                p.style.setProperty('--y-mid2', yMid2);
+                p.style.setProperty('--x-mid3', xMid3);
+                p.style.setProperty('--y-mid3', yMid3);
+                p.style.setProperty('--x-mid4', xMid4);
+                p.style.setProperty('--y-mid4', yMid4);
+                p.style.setProperty('--x-end', xEnd);
+                p.style.setProperty('--y-end', yEnd);
+                p.style.animationDelay = Math.random() * 20 + 's';
+                p.style.animationDuration = (Math.random() * 15 + 20) + 's';
+                container.appendChild(p);
             }
         }
-
-        // Generate particles on page load
         document.addEventListener('DOMContentLoaded', generateParticles);
 
-        // ============================================================
-        // FLOATING GEOMETRIC SHAPES
-        // ============================================================
+        // floating shapes
         function addFloatingShapes() {
             const hero = document.querySelector('.hero');
             if (!hero) return;
-
-            const shapes = ['circle', 'square', 'triangle'];
-            const shapeChars = ['✦', '◆', '▲', '●', '■', '★'];
-
+            const chars = ['✦', '◆', '▲', '●', '■', '★'];
             for (let i = 0; i < 8; i++) {
                 const shape = document.createElement('div');
                 shape.className = 'floating-shape';
-                shape.textContent = shapeChars[i % shapeChars.length];
+                shape.textContent = chars[i % chars.length];
                 shape.style.fontSize = (Math.random() * 30 + 20) + 'px';
                 shape.style.position = 'absolute';
                 shape.style.left = (Math.random() * 90 + 5) + '%';
@@ -1807,10 +1324,6 @@
                 hero.appendChild(shape);
             }
         }
-
-        // ============================================================
-        // FLOATING SHAPE ANIMATION KEYFRAMES
-        // ============================================================
         const styleSheet = document.createElement('style');
         styleSheet.textContent = `
             @keyframes floatShape {
@@ -1821,43 +1334,32 @@
             }
         `;
         document.head.appendChild(styleSheet);
-
-        // Add floating shapes after content loads
         document.addEventListener('DOMContentLoaded', addFloatingShapes);
 
-        // ============================================================
-        // CONTACT FORM HANDLER - Sends to Email
-        // ============================================================
+        // contact form
         function handleContactForm(event) {
             event.preventDefault();
-
-            // Get form values
             const name = document.getElementById('contactName').value.trim();
             const email = document.getElementById('contactEmail').value.trim();
             const phone = document.getElementById('contactPhone').value.trim();
             const subject = document.getElementById('contactSubject').value.trim();
             const message = document.getElementById('contactMessage').value.trim();
 
-            // Validate required fields
             if (!name || !email || !subject || !message) {
                 showToast('Please fill in all required fields.', 'error');
                 return false;
             }
-
-            // Validate email format
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 showToast('Please enter a valid email address.', 'error');
                 return false;
             }
 
-            // Show loading state
             const submitBtn = document.getElementById('submitBtn');
             const spinner = document.getElementById('sendSpinner');
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
 
-            // Build email content
             const emailSubject = encodeURIComponent('RAW GLOBAL TECH Contact: ' + subject);
             const emailBody = encodeURIComponent(
                 'Name: ' + name + '\n' +
@@ -1865,32 +1367,19 @@
                 'Phone: ' + (phone || 'Not provided') + '\n\n' +
                 'Message:\n' + message
             );
-
-            // Open default email client with pre-filled details
             const mailtoLink = 'mailto:edmonddennis100@gmail.com?subject=' + emailSubject + '&body=' + emailBody;
+            window.open(mailtoLink, '_blank');
 
-            // Try to open email client
-            const mailtoWindow = window.open(mailtoLink, '_blank');
-
-            // Reset button state after a delay
             setTimeout(() => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
                 spinner.classList.add('d-none');
             }, 3000);
-
-            // Show success toast
             showToast('Thank you! Your message is being prepared. Please check your email client to send.', 'success');
-
-            // Reset form fields (optional - user may want to keep them)
-            // document.getElementById('contactForm').reset();
-
             return false;
         }
 
-        // ============================================================
-        // TOAST NOTIFICATION SYSTEM
-        // ============================================================
+        // toast
         function showToast(message, type = 'success') {
             const container = document.getElementById('toastContainer');
             if (!container) {
@@ -1900,16 +1389,9 @@
                 document.body.appendChild(newContainer);
                 return showToast(message, type);
             }
-
             const toast = document.createElement('div');
             toast.className = `toast-custom ${type}`;
-            
-            const icons = {
-                success: 'fa-check-circle',
-                error: 'fa-exclamation-circle',
-                info: 'fa-info-circle'
-            };
-
+            const icons = { success: 'fa-check-circle', error: 'fa-exclamation-circle', info: 'fa-info-circle' };
             toast.innerHTML = `
                 <div class="d-flex align-items-center">
                     <span class="toast-icon"><i class="fas ${icons[type] || icons.success}"></i></span>
@@ -1917,10 +1399,7 @@
                     <button type="button" class="toast-close" onclick="this.closest('.toast-custom').remove()">&times;</button>
                 </div>
             `;
-
             container.appendChild(toast);
-
-            // Auto-remove after 6 seconds
             setTimeout(() => {
                 if (toast.parentElement) {
                     toast.style.animation = 'slideOutRight 0.5s ease forwards';
@@ -1929,47 +1408,31 @@
             }, 6000);
         }
 
-        // ============================================================
-        // ACTIVE NAV LINK ON SCROLL
-        // ============================================================
+        // active nav
         const sections = document.querySelectorAll('section[id]');
         window.addEventListener('scroll', function() {
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 120;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
+                if (window.scrollY >= sectionTop) current = section.getAttribute('id');
             });
-
             document.querySelectorAll('.navbar .nav-link').forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
             });
         });
 
-        // ============================================================
-        // KEYBOARD SHORTCUTS
-        // ============================================================
+        // keyboard shortcuts
         document.addEventListener('keydown', function(e) {
-            // Press 'H' to go home
-            if (e.key === 'h' && !e.ctrlKey && !e.altKey && !e.metaKey) {
-                if (!document.querySelector('input:focus, textarea:focus')) {
-                    e.preventDefault();
-                    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
-                }
+            if (e.key === 'h' && !e.ctrlKey && !e.altKey && !e.metaKey && !document.querySelector('input:focus, textarea:focus')) {
+                e.preventDefault();
+                document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
             }
-            // Press 'C' to go to contact
-            if (e.key === 'c' && !e.ctrlKey && !e.altKey && !e.metaKey) {
-                if (!document.querySelector('input:focus, textarea:focus')) {
-                    e.preventDefault();
-                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                }
+            if (e.key === 'c' && !e.ctrlKey && !e.altKey && !e.metaKey && !document.querySelector('input:focus, textarea:focus')) {
+                e.preventDefault();
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
             }
         });
     </script>
-
 </body>
 </html>
