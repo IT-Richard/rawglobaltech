@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAW GLOBAL TECH · Home</title>
+  <title>RAW GLOBAL TECH · Cyber Blue</title>
   <!-- Bootstrap, Fonts, Icons, AOS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Orbitron:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -61,7 +61,7 @@
       gap:10px;
     }
     .navbar-brand:hover { transform:scale(1.02); color:var(--accent-cyan-light) !important; }
-    .navbar-brand img { height:80px; }
+    .navbar-brand img { height:50px; width:auto; }
     .nav-link {
       color:var(--text-light) !important;
       font-weight:500;
@@ -85,10 +85,10 @@
     /* ===== DROPDOWN ===== */
     .dropdown-menu {
       background: var(--bg-dark-secondary);
-      border: 1px solid rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0,229,255,0.08);
       border-radius: 12px;
       padding: 8px 0;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
     }
     .dropdown-item {
       color: var(--text-light);
@@ -97,13 +97,11 @@
       font-weight: 400;
     }
     .dropdown-item:hover {
-      background: rgba(0, 229, 255, 0.08);
+      background: rgba(0,229,255,0.08);
       color: var(--accent-cyan);
       padding-left: 26px;
     }
-    .dropdown-divider {
-      border-color: rgba(0, 229, 255, 0.06);
-    }
+    .dropdown-divider { border-color: rgba(0,229,255,0.06); }
 
     /* ===== HERO ===== */
     .hero {
@@ -149,17 +147,7 @@
       margin:0 auto 30px;
       line-height:1.8;
     }
-    /* "Innovation Unleashed" under RAW GLOBAL TECH */
-    .hero-tagline {
-      font-size: 1.1rem;
-      color: var(--accent-cyan-light);
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      font-weight: 300;
-      margin-top: -10px;
-      margin-bottom: 20px;
-      opacity: 0.8;
-    }
+    .hero p .sub-line { display:block; font-size:0.9rem; color:var(--text-muted); opacity:0.7; margin-top:-10px; }
     .btn-primary-custom {
       display:inline-flex; align-items:center; gap:10px;
       padding:14px 35px;
@@ -380,14 +368,14 @@
 
     @media (max-width:768px) {
       .hero h1 { font-size:2.5rem; }
-      .hero-tagline { font-size:0.9rem; letter-spacing:2px; }
       .section-title { font-size:1.8rem; }
       .btn-primary-custom, .btn-outline-custom, .btn-cyan { width:100%; justify-content:center; }
       .hero .btn-group { flex-direction:column; align-items:center; gap:12px; }
+      .navbar-brand { font-size:1.3rem; }
+      .navbar-brand img { height:40px; }
     }
     @media (max-width:480px) {
       .hero h1 { font-size:2rem; }
-      .navbar-brand { font-size:1.3rem; }
     }
   </style>
 </head>
@@ -397,7 +385,7 @@
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand" href="#home">
-      <img src="img/rgt_logo.png" alt="RGT">
+      <img src="Img/rgt_logo.png" alt="RGT">
       RAW GLOBAL TECH
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -410,15 +398,13 @@
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <!-- SOFTWARE DROPDOWN -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSoftware" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="softwareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Software
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownSoftware">
-            <!-- Internal link: scrolls to "Our Software Solutions" section -->
+          <ul class="dropdown-menu" aria-labelledby="softwareDropdown">
             <li><a class="dropdown-item" href="#software">Our Software Solutions</a></li>
             <li><hr class="dropdown-divider"></li>
-            <!-- External link: School Management System -->
-            <li><a class="dropdown-item" href="school-management-features.html" target="_blank">School Management System</a></li>
+            <li><a class="dropdown-item" href="school-management-features.html">School Management System</a></li>
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -433,9 +419,10 @@
   <div class="hero-content">
     <span class="hero-badge"><i class="fas fa-rocket me-2"></i>Innovation Unleashed</span>
     <h1>RAW GLOBAL <br><span class="highlight">TECH</span></h1>
-    <!-- "Innovation Unleashed" under RAW GLOBAL TECH -->
-    <div class="hero-tagline">Innovation Unleashed</div>
-    <p>Empowering businesses with cutting-edge IT solutions, software development, and digital transformation services.</p>
+    <p>
+      Empowering businesses with cutting-edge IT solutions, software development, and digital transformation services.
+      <span class="sub-line">Innovation Unleashed</span>
+    </p>
     <div class="btn-group">
       <a href="#services" class="btn-primary-custom"><i class="fas fa-rocket"></i> Explore Services</a>
       <a href="about.php" class="btn-outline-custom"><i class="fas fa-users"></i> Meet the Team</a>
@@ -621,6 +608,20 @@
     document.getElementById('contactMessage').value = '';
     return false;
   }
+
+  // active nav link
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', function() {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) current = section.getAttribute('id');
+    });
+    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  });
 </script>
 </body>
 </html>
