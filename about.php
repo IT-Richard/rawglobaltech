@@ -361,7 +361,7 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="richard.php">
+      <a class="navbar-brand" href="about.php">
         <img src="img/rgt_logo.png" alt="RGT">
         RAW GLOBAL TECH
       </a>
@@ -370,9 +370,9 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="richard.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="richard_about.php">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="richard.php#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.php">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
           <!-- SOFTWARE DROPDOWN -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSoftware" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -380,13 +380,13 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownSoftware">
               <!-- Internal link: scrolls to "Our Software Solutions" section on homepage -->
-              <li><a class="dropdown-item" href="richard.php#software">Our Software Solutions</a></li>
+              <li><a class="dropdown-item" href="index.html#software">Our Software Solutions</a></li>
               <li><hr class="dropdown-divider"></li>
               <!-- External link: School Management System -->
               <li><a class="dropdown-item" href="school-management-features.html" target="_blank">School Management System</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="richard.php#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -399,7 +399,7 @@
       <span class="badge bg-cyan text-dark mb-3" style="background:var(--accent-cyan); font-weight:600; padding:8px 20px;">Innovation Unleashed</span>
       <h1>RAW GLOBAL <span class="highlight">TECH</span></h1>
       <p>Empowering businesses with cutting‑edge IT solutions, software development, and digital transformation.</p>
-      <a href="richard.php#services" class="btn-primary-custom"><i class="fas fa-rocket me-2"></i>Explore Services</a>
+      <a href="index.html#services" class="btn-primary-custom"><i class="fas fa-rocket me-2"></i>Explore Services</a>
     </div>
   </section>
 
@@ -492,10 +492,10 @@
         </div>
         <div class="col-lg-4 text-center">
           <div class="footer-links">
-            <a href="richard.php">Home</a>
+            <a href="index.html">Home</a>
             <a href="richard_about.php">About</a>
-            <a href="richard.php#services">Services</a>
-            <a href="richard.php#contact">Contact</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact">Contact</a>
           </div>
         </div>
         <div class="col-lg-4 text-center text-lg-end">
