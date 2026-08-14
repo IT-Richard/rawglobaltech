@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAW GLOBAL TECH · Home</title>
-  <!-- Bootstrap, Fonts, Icons, AOS (same as original) -->
+  <!-- Bootstrap, Fonts, Icons, AOS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Orbitron:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    /* ===== ROOT (exactly as original) ===== */
+    /* ===== ROOT ===== */
     :root {
       --primary-blue: #00b4d8;
       --primary-dark: #0077b6;
@@ -41,7 +41,7 @@
     ::-webkit-scrollbar-track { background:var(--bg-dark); }
     ::-webkit-scrollbar-thumb { background:var(--gradient-primary); border-radius:10px; }
 
-    /* ===== NAVBAR (unchanged) ===== */
+    /* ===== NAVBAR ===== */
     .navbar {
       background: rgba(10,14,26,0.88);
       backdrop-filter: blur(15px);
@@ -61,7 +61,7 @@
       gap:10px;
     }
     .navbar-brand:hover { transform:scale(1.02); color:var(--accent-cyan-light) !important; }
-    .navbar-brand img { height:50px; }
+    .navbar-brand img { height:80px; }
     .nav-link {
       color:var(--text-light) !important;
       font-weight:500;
@@ -81,6 +81,29 @@
     .nav-link:hover::after, .nav-link.active::after { width:70%; }
     .nav-link:hover { color:var(--accent-cyan) !important; transform:translateY(-2px); }
     .navbar-toggler { border:1px solid rgba(0,229,255,0.15); padding:8px 12px; border-radius:8px; }
+
+    /* ===== DROPDOWN ===== */
+    .dropdown-menu {
+      background: var(--bg-dark-secondary);
+      border: 1px solid rgba(0, 229, 255, 0.08);
+      border-radius: 12px;
+      padding: 8px 0;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    }
+    .dropdown-item {
+      color: var(--text-light);
+      padding: 10px 20px;
+      transition: var(--transition-smooth);
+      font-weight: 400;
+    }
+    .dropdown-item:hover {
+      background: rgba(0, 229, 255, 0.08);
+      color: var(--accent-cyan);
+      padding-left: 26px;
+    }
+    .dropdown-divider {
+      border-color: rgba(0, 229, 255, 0.06);
+    }
 
     /* ===== HERO ===== */
     .hero {
@@ -119,7 +142,24 @@
       text-shadow:0 0 40px rgba(0,180,216,0.15);
     }
     .hero h1 .highlight { background:var(--gradient-cyan); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .hero p { font-size:1.3rem; color:var(--text-muted); max-width:600px; margin:0 auto 30px; line-height:1.8; }
+    .hero p {
+      font-size:1.3rem;
+      color:var(--text-muted);
+      max-width:600px;
+      margin:0 auto 30px;
+      line-height:1.8;
+    }
+    /* "Innovation Unleashed" under RAW GLOBAL TECH */
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: var(--accent-cyan-light);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 300;
+      margin-top: -10px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
     .btn-primary-custom {
       display:inline-flex; align-items:center; gap:10px;
       padding:14px 35px;
@@ -170,7 +210,7 @@
     .section-dark { background:var(--bg-dark-secondary); padding:80px 0; }
     .section-darker { background:var(--bg-dark); padding:80px 0; }
 
-    /* ===== SERVICES CARDS (same) ===== */
+    /* ===== SERVICES CARDS ===== */
     .service-card {
       background:var(--bg-card);
       border:1px solid rgba(0,229,255,0.04);
@@ -340,9 +380,14 @@
 
     @media (max-width:768px) {
       .hero h1 { font-size:2.5rem; }
+      .hero-tagline { font-size:0.9rem; letter-spacing:2px; }
       .section-title { font-size:1.8rem; }
       .btn-primary-custom, .btn-outline-custom, .btn-cyan { width:100%; justify-content:center; }
       .hero .btn-group { flex-direction:column; align-items:center; gap:12px; }
+    }
+    @media (max-width:480px) {
+      .hero h1 { font-size:2rem; }
+      .navbar-brand { font-size:1.3rem; }
     }
   </style>
 </head>
@@ -352,7 +397,7 @@
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand" href="#home">
-      <img src="img/rgt_logo.png" alt="RGT">
+      <img src="rgt_logo.png" alt="RGT">
       RAW GLOBAL TECH
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -361,10 +406,21 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-        <!-- LINK TO ABOUT PAGE (richard_about.php) -->
         <li class="nav-item"><a class="nav-link" href="richard_about.php">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#software">Software</a></li>
+        <!-- SOFTWARE DROPDOWN -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSoftware" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Software
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownSoftware">
+            <!-- Internal link: scrolls to "Our Software Solutions" section -->
+            <li><a class="dropdown-item" href="#software">Our Software Solutions</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <!-- External link: School Management System -->
+            <li><a class="dropdown-item" href="school-management-features.html" target="_blank">School Management System</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -377,6 +433,8 @@
   <div class="hero-content">
     <span class="hero-badge"><i class="fas fa-rocket me-2"></i>Innovation Unleashed</span>
     <h1>RAW GLOBAL <br><span class="highlight">TECH</span></h1>
+    <!-- "Innovation Unleashed" under RAW GLOBAL TECH -->
+    <div class="hero-tagline">Innovation Unleashed</div>
     <p>Empowering businesses with cutting-edge IT solutions, software development, and digital transformation services.</p>
     <div class="btn-group">
       <a href="#services" class="btn-primary-custom"><i class="fas fa-rocket"></i> Explore Services</a>
@@ -415,7 +473,7 @@
   </div>
 </section>
 
-<!-- ===== SOFTWARE ===== -->
+<!-- ===== SOFTWARE (Our Software Solutions) ===== -->
 <section id="software" class="section-darker">
   <div class="container">
     <div class="text-center" data-aos="fade-up">
@@ -444,8 +502,8 @@
       <div class="col-lg-5" data-aos="fade-right">
         <div class="row g-3">
           <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><h6>Office Location</h6><p>RAW GLOBAL TECH,<br>Liberia</p></div></div>
-          <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-phone"></i></div><h6>Phone / WhatsApp</h6><p><a href="tel:+231555806349">+231 555 806 349</a></p></div></div>
-          <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-envelope"></i></div><h6>Email</h6><p><a href="mailto:rawglobalit@gmail.com">rawglobalit@gmail.com</a></p></div></div>
+          <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-phone"></i></div><h6>Phone / WhatsApp</h6><p><a href="tel:+231555806349">+231 555 806 349</a></p><p><a href="tel:+23177673339">+231 777 673 339</a></p></div></div>
+          <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-envelope"></i></div><h6>Email</h6><p><a href="mailto:rawglobalt@gmail.com">rawglobalt@gmail.com</a></p></div></div>
           <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-clock"></i></div><h6>Working Hours</h6><p>Mon-Fri: 8AM – 6PM<br>Sat: 9AM – 2PM</p></div></div>
         </div>
       </div>
@@ -475,7 +533,7 @@
         <div class="footer-brand">RAW GLOBAL TECH</div>
         <p>Innovation Unleashed</p>
         <p style="font-size:0.85rem;color:var(--text-muted);"><i class="fas fa-phone me-2"></i>+231 555 806 349</p>
-        <p style="font-size:0.85rem;color:var(--text-muted);"><i class="fas fa-envelope me-2"></i>edmonddennis100@gmail.com</p>
+        <p style="font-size:0.85rem;color:var(--text-muted);"><i class="fas fa-envelope me-2"></i>rawglobalt@gmail.com</p>
       </div>
       <div class="col-lg-4 text-center">
         <div class="footer-links">
@@ -488,7 +546,7 @@
       </div>
       <div class="col-lg-4 text-center text-lg-end">
         <div>
-          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/richardarchemedeswilliamsjr" class="social-link"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
           <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
           <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -512,7 +570,7 @@
     else nav.classList.remove('scrolled');
   });
 
-  // particles (reuse)
+  // particles
   (function generateParticles() {
     const container = document.getElementById('particleContainer');
     if (!container) return;
@@ -553,7 +611,7 @@
     }
   })();
 
-  // contact form (simple)
+  // contact form
   function handleContact(e) {
     e.preventDefault();
     alert('Thank you! Your message has been sent (demo).');
