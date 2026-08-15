@@ -157,7 +157,7 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:4rem;
+      font-size:3.5rem;
       color:#fff;
       margin-bottom:12px;
     }
@@ -191,7 +191,7 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:5rem;
+      font-size:4rem;
       color:#fff;
       margin:0 auto 18px;
     }
@@ -293,16 +293,16 @@
 
     @media (max-width:768px) {
       .section-title { font-size:2rem; }
-      .team-avatar { width:100px; height:100px; font-size:3rem; }
+      .team-avatar { width:100px; height:100px; font-size:2.8rem; }
       .info-grid { grid-template-columns:1fr; }
-      .dashboard-avatar { width:110px; height:110px; font-size:3.5rem; }
+      .dashboard-avatar { width:110px; height:110px; font-size:3.2rem; }
       .dashboard-name { font-size:1.8rem; }
       .navbar-brand { font-size:1.3rem; }
       .navbar-brand img { height:40px; }
     }
     @media (max-width:480px) {
       .section-title { font-size:1.6rem; }
-      .team-avatar { width:80px; height:80px; font-size:2.4rem; }
+      .team-avatar { width:80px; height:80px; font-size:2.2rem; }
     }
   </style>
 </head>
@@ -404,14 +404,76 @@
 <script>
   AOS.init({ duration:700, once:true });
 
-  // ===== TEAM DATA (emails updated to rawglobalt@gmail.com) =====
+  // ===== TEAM DATA with images and updated Edmond details =====
+  // Note: Images are placeholders using UI avatars with initials.
+  // You can replace the src with actual image paths.
   const teamMembers = [
-    { name: "Richard", role: "Founder & CEO", bio: "Visionary leader with 15+ years in IT. Passionate about AI and digital transformation.", email: "rawglobalt@gmail.com", phone: "+231 555 100 001", skills: ["AI/ML", "Cloud Architecture", "Leadership"], avatar: "👨‍💻", bg: "linear-gradient(135deg,#0077b6,#00e5ff)" },
-    { name: "Edmond Dennis", role: "Lead Developer", bio: "Full‑stack architect specializing in scalable web applications and microservices.", email: "rawglobalt@gmail.com", phone: "+231 555 806 349", skills: ["React", "Node.js", "Python", "Laravel"], avatar: "🧑‍💻", bg: "linear-gradient(135deg,#00b4d8,#72f0ff)" },
-    { name: "Sarah K.", role: "UI/UX Director", bio: "Design thinker crafting intuitive experiences that bridge technology and human needs.", email: "rawglobalt@gmail.com", phone: "+231 555 200 002", skills: ["Figma", "Design Systems", "User Research"], avatar: "🎨", bg: "linear-gradient(135deg,#00e5ff,#0077b6)" },
-    { name: "Michael T.", role: "Security Engineer", bio: "Cybersecurity expert with focus on zero‑trust architectures and threat intelligence.", email: "rawglobalt@gmail.com", phone: "+231 555 300 003", skills: ["Pen Testing", "SIEM", "Cloud Security"], avatar: "🔐", bg: "linear-gradient(135deg,#0a1e30,#00b4d8)" },
-    { name: "Grace M.", role: "Project Manager", bio: "Agile coach and PMP certified, delivering complex IT projects on time and within budget.", email: "rawglobalt@gmail.com", phone: "+231 555 400 004", skills: ["Agile", "Scrum", "Risk Management"], avatar: "📊", bg: "linear-gradient(135deg,#132236,#00e5ff)" },
-    { name: "David L.", role: "Data Scientist", bio: "Turning data into actionable insights using machine learning and advanced analytics.", email: "rawglobalt@gmail.com", phone: "+231 555 500 005", skills: ["Python", "SQL", "TensorFlow", "Tableau"], avatar: "📈", bg: "linear-gradient(135deg,#0077b6,#72f0ff)" }
+    { 
+      name: "Richard Archemedes Williams Jr", 
+      role: "Founder & CEO", 
+      bio: "Visionary leader with 15+ years in IT. Passionate about AI and digital transformation.", 
+      email: "rawglobalt@gmail.com", 
+      phone: "+231 555 100 001", 
+      skills: ["AI/ML", "Cloud Architecture", "Leadership"], 
+      avatar: "img/IMG_0334.jpeg",
+      fallback: "👨‍💻",
+      bg: "linear-gradient(135deg,#0077b6,#00e5ff)" 
+    },
+    { 
+      name: "Edmond Dennis", 
+      role: "Lead Developer", 
+      bio: "Full‑stack architect specializing in scalable web applications and microservices.", 
+      email: "edmonddennis100@gmail.com", 
+      phone: "+231 777 190 029, +231 881 996 883", 
+      skills: ["React", "Node.js", "Python", "Laravel"], 
+      avatar: "img/IMG_0321.jpeg",
+      fallback: "🧑‍💻",
+      bg: "linear-gradient(135deg,#00b4d8,#72f0ff)" 
+    },
+    { 
+      name: "Sarah K.", 
+      role: "UI/UX Director", 
+      bio: "Design thinker crafting intuitive experiences that bridge technology and human needs.", 
+      email: "rawglobalt@gmail.com", 
+      phone: "+231 555 200 002", 
+      skills: ["Figma", "Design Systems", "User Research"], 
+      avatar: "img/sarah.jpg", // replace with actual image path
+      fallback: "🎨",
+      bg: "linear-gradient(135deg,#00e5ff,#0077b6)" 
+    },
+    { 
+      name: "Michael T.", 
+      role: "Security Engineer", 
+      bio: "Cybersecurity expert with focus on zero‑trust architectures and threat intelligence.", 
+      email: "rawglobalt@gmail.com", 
+      phone: "+231 555 300 003", 
+      skills: ["Pen Testing", "SIEM", "Cloud Security"], 
+      avatar: "img/michael.jpg", // replace with actual image path
+      fallback: "🔐",
+      bg: "linear-gradient(135deg,#0a1e30,#00b4d8)" 
+    },
+    { 
+      name: "Grace M.", 
+      role: "Project Manager", 
+      bio: "Agile coach and PMP certified, delivering complex IT projects on time and within budget.", 
+      email: "rawglobalt@gmail.com", 
+      phone: "+231 555 400 004", 
+      skills: ["Agile", "Scrum", "Risk Management"], 
+      avatar: "img/grace.jpg", // replace with actual image path
+      fallback: "📊",
+      bg: "linear-gradient(135deg,#132236,#00e5ff)" 
+    },
+    { 
+      name: "David L.", 
+      role: "Data Scientist", 
+      bio: "Turning data into actionable insights using machine learning and advanced analytics.", 
+      email: "rawglobalt@gmail.com", 
+      phone: "+231 555 500 005", 
+      skills: ["Python", "SQL", "TensorFlow", "Tableau"], 
+      avatar: "img/david.jpg", // replace with actual image path
+      fallback: "📈",
+      bg: "linear-gradient(135deg,#0077b6,#72f0ff)" 
+    }
   ];
 
   // ===== RENDER TEAM GRID =====
@@ -421,9 +483,17 @@
     col.className = 'col-6 col-md-4 col-lg-3';
     col.setAttribute('data-aos', 'fade-up');
     col.setAttribute('data-aos-delay', (idx * 50));
+    
+    // Use image if available, otherwise fallback to emoji
+    const avatarContent = m.avatar ? 
+      `<img src="${m.avatar}" alt="${m.name}" class="team-avatar" style="background:${m.bg}; object-fit:cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` :
+      '';
+    const fallbackContent = `<div class="team-avatar" style="background:${m.bg}; display:flex; align-items:center; justify-content:center; font-size:3.5rem; color:#fff;">${m.fallback}</div>`;
+    
     col.innerHTML = `
       <div class="team-card" onclick="openDashboard(${idx})">
-        <div class="team-avatar" style="background:${m.bg};">${m.avatar}</div>
+        ${m.avatar ? `<img src="${m.avatar}" alt="${m.name}" class="team-avatar" style="background:${m.bg}; object-fit:cover;" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-avatar').style.display='flex';">` : ''}
+        ${m.avatar ? `<div class="fallback-avatar team-avatar" style="background:${m.bg}; display:none; align-items:center; justify-content:center; font-size:3.5rem; color:#fff;">${m.fallback}</div>` : `<div class="team-avatar" style="background:${m.bg}; display:flex; align-items:center; justify-content:center; font-size:3.5rem; color:#fff;">${m.fallback}</div>`}
         <div class="team-name">${m.name}</div>
         <div class="team-role">${m.role}</div>
       </div>
@@ -436,16 +506,29 @@
     const m = teamMembers[index];
     if (!m) return;
     const body = document.getElementById('dashboardBody');
+    
+    // Handle multiple phone numbers
+    const phoneDisplay = m.phone.includes(',') ? 
+      m.phone.split(',').map(p => p.trim()).join('<br>') : 
+      m.phone;
+    
     body.innerHTML = `
       <div class="text-center">
-        <div class="dashboard-avatar" style="background:${m.bg};">${m.avatar}</div>
+        ${m.avatar ? 
+          `<img src="${m.avatar}" alt="${m.name}" class="dashboard-avatar" style="background:${m.bg}; object-fit:cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">` : 
+          ''
+        }
+        ${m.avatar ? 
+          `<div class="dashboard-avatar" style="background:${m.bg}; display:none; align-items:center; justify-content:center; font-size:4rem; color:#fff;">${m.fallback}</div>` : 
+          `<div class="dashboard-avatar" style="background:${m.bg}; display:flex; align-items:center; justify-content:center; font-size:4rem; color:#fff;">${m.fallback}</div>`
+        }
         <div class="dashboard-name">${m.name}</div>
         <div class="dashboard-role">${m.role}</div>
         <span class="dashboard-badge mt-2"><i class="fas fa-bolt me-1"></i>Active</span>
       </div>
       <div class="info-grid">
         <div class="info-item"><div class="label"><i class="fas fa-envelope me-1"></i>Email</div><div class="value">${m.email}</div></div>
-        <div class="info-item"><div class="label"><i class="fas fa-phone me-1"></i>Phone</div><div class="value">${m.phone}</div></div>
+        <div class="info-item"><div class="label"><i class="fas fa-phone me-1"></i>Phone</div><div class="value">${phoneDisplay}</div></div>
         <div class="info-item" style="grid-column: span 2;"><div class="label"><i class="fas fa-quote-left me-1"></i>Bio</div><div class="value" style="font-weight:400; color:var(--text-muted);">${m.bio}</div></div>
         <div class="info-item" style="grid-column: span 2;"><div class="label"><i class="fas fa-cogs me-1"></i>Skills</div><div class="value">${m.skills.map(s => `<span class="skill-tag">${s}</span>`).join(' ')}</div></div>
       </div>
@@ -471,7 +554,6 @@
   (function generateParticles() {
     const container = document.querySelector('.section-darker');
     if (!container) return;
-    // we only want particles in the background, but we'll add subtle ones
     const pContainer = document.createElement('div');
     pContainer.style.position = 'absolute';
     pContainer.style.top = '0';
