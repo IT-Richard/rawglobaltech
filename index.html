@@ -366,6 +366,47 @@
       75% { transform:translate(20px,-30px) rotate(270deg) scale(1.05); }
     }
 
+    /* ===== TOAST ===== */
+    .toast-container {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      z-index: 9999;
+    }
+    .toast-custom {
+      background: var(--bg-card);
+      border: 1px solid rgba(0,229,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      color: var(--text-light);
+      min-width: 300px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      animation: slideInRight 0.5s ease;
+    }
+    .toast-custom.success { border-left: 4px solid #00e5ff; }
+    .toast-custom.error { border-left: 4px solid #ff6b6b; }
+    .toast-custom .toast-icon { font-size: 1.5rem; margin-right: 12px; }
+    .toast-custom.success .toast-icon { color: #00e5ff; }
+    .toast-custom.error .toast-icon { color: #ff6b6b; }
+    .toast-custom .toast-close {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      padding: 0 5px;
+      transition: var(--transition-smooth);
+    }
+    .toast-custom .toast-close:hover { color: var(--text-light); }
+    @keyframes slideInRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideOutRight {
+      from { transform: translateX(0); opacity: 1; }
+      to { transform: translateX(100%); opacity: 0; }
+    }
+
     @media (max-width:768px) {
       .hero h1 { font-size:2.5rem; }
       .section-title { font-size:1.8rem; }
@@ -376,6 +417,7 @@
     }
     @media (max-width:480px) {
       .hero h1 { font-size:2rem; }
+      .toast-custom { min-width: 250px; }
     }
   </style>
 </head>
@@ -425,7 +467,7 @@
     </p>
     <div class="btn-group">
       <a href="#services" class="btn-primary-custom"><i class="fas fa-rocket"></i> Explore Services</a>
-      <a href="about.php" class="btn-outline-custom"><i class="fas fa-users"></i> Meet the Team</a>
+      <a href="about.html" class="btn-outline-custom"><i class="fas fa-users"></i> Meet the Team</a>
     </div>
   </div>
 </section>
@@ -503,7 +545,12 @@
               <div class="col-md-6"><input type="email" class="form-control" id="contactEmail" placeholder="Email" required></div>
               <div class="col-md-12"><input type="text" class="form-control" id="contactSubject" placeholder="Subject" required></div>
               <div class="col-md-12"><textarea class="form-control" id="contactMessage" rows="5" placeholder="Message" required></textarea></div>
-              <div class="col-12"><button type="submit" class="btn-cyan w-100"><i class="fas fa-paper-plane me-2"></i>Send Message</button></div>
+              <div class="col-12">
+                <button type="submit" class="btn-cyan w-100" id="submitBtn">
+                  <i class="fas fa-paper-plane me-2"></i>Send Message
+                  <span class="spinner-border spinner-border-sm d-none" role="status" id="sendSpinner"></span>
+                </button>
+              </div>
             </div>
           </form>
         </div>
@@ -543,6 +590,9 @@
     </div>
   </div>
 </footer>
+
+<!-- ===== TOAST CONTAINER ===== -->
+<div class="toast-container" id="toastContainer"></div>
 
 <!-- ===== SCRIPTS ===== -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -598,14 +648,88 @@
     }
   })();
 
-  // contact form
+  // ===== TOAST FUNCTION =====
+  function showToast(message, type = 'success') {
+    const container = document.getElementById('toastContainer');
+    if (!container) {
+      const newContainer = document.createElement('div');
+      newContainer.id = 'toastContainer';
+      newContainer.className = 'toast-container';
+      document.body.appendChild(newContainer);
+      return showToast(message, type);
+    }
+    const toast = document.createElement('div');
+    toast.className = `toast-custom ${type}`;
+    const icons = { success: 'fa-check-circle', error: 'fa-exclamation-circle', info: 'fa-info-circle' };
+    toast.innerHTML = `
+      <div class="d-flex align-items-center">
+        <span class="toast-icon"><i class="fas ${icons[type] || icons.success}"></i></span>
+        <span style="flex:1;">${message}</span>
+        <button type="button" class="toast-close" onclick="this.closest('.toast-custom').remove()">&times;</button>
+      </div>
+    `;
+    container.appendChild(toast);
+    setTimeout(() => {
+      if (toast.parentElement) {
+        toast.style.animation = 'slideOutRight 0.5s ease forwards';
+        setTimeout(() => toast.remove(), 500);
+      }
+    }, 6000);
+  }
+
+  // ===== CONTACT FORM - SENDS TO rawglobalt@gmail.com =====
   function handleContact(e) {
     e.preventDefault();
-    alert('Thank you! Your message has been sent (demo).');
+
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const subject = document.getElementById('contactSubject').value.trim();
+    const message = document.getElementById('contactMessage').value.trim();
+
+    // Validation
+    if (!name || !email || !subject || !message) {
+      showToast('Please fill in all required fields.', 'error');
+      return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      showToast('Please enter a valid email address.', 'error');
+      return false;
+    }
+
+    // Show sending state
+    const submitBtn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('sendSpinner');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+
+    // Build mailto link with recipient rawglobalt@gmail.com
+    const mailtoSubject = encodeURIComponent('RAW GLOBAL TECH Contact: ' + subject);
+    const mailtoBody = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n\n' +
+      'Message:\n' + message
+    );
+    const mailtoLink = 'mailto:rawglobalt@gmail.com?subject=' + mailtoSubject + '&body=' + mailtoBody;
+
+    // Open email client
+    window.open(mailtoLink, '_blank');
+
+    // Reset button after delay
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+      spinner.classList.add('d-none');
+    }, 3000);
+
+    showToast('Thank you! Your email client is opening. Please send the message.', 'success');
+
+    // Clear form fields (optional)
     document.getElementById('contactName').value = '';
     document.getElementById('contactEmail').value = '';
     document.getElementById('contactSubject').value = '';
     document.getElementById('contactMessage').value = '';
+
     return false;
   }
 
