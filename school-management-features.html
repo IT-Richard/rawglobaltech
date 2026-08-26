@@ -1,279 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Management System Features - RAW GLOBAL TECH</title>
-    <!-- Bootstrap CSS for responsiveness -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #0d6efd; /* Blue */
-            --secondary-color: #6c757d; /* Gray */
-            --accent-color: #ffc107; /* Gold */
-            --bg-dark: #121212;
-            --text-light: #ffffff;
-            --text-dark: #212529;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            overflow-x: hidden;
-        }
-
-        .navbar {
-            background-color: rgba(18, 18, 18, 0.8);
-            backdrop-filter: blur(10px);
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar:hover {
-            background-color: rgba(18, 18, 18, 1);
-        }
-
-        .navbar-brand {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            color: var(--accent-color);
-        }
-
-        .nav-link {
-            color: var(--text-light);
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-color);
-            transform: translateY(-2px);
-        }
-
-        .section-title {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--accent-color);
-            position: relative;
-            margin-bottom: 3rem;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--primary-color);
-            margin: 10px auto 0;
-        }
-
-        .feature-category {
-            background-color: #1e1e1e;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .feature-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        .feature-category h3 {
-            color: var(--primary-color);
-            font-family: 'Orbitron', sans-serif;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-list li {
-            background-color: #282828;
-            padding: 0.8rem 1.2rem;
-            margin-bottom: 0.5rem;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            transition: background-color 0.2s ease;
-        }
-
-        .feature-list li:hover {
-            background-color: #383838;
-        }
-
-        .feature-list li i {
-            color: var(--accent-color);
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-
-        .footer {
-            background-color: #0a0a0a;
-            padding: 2rem 0;
-        }
-
-        .social-link {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .social-link:hover {
-            color: var(--accent-color);
-            transform: scale(1.2);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Management System · RAW GLOBAL TECH</title>
+  <meta name="description" content="RAW GLOBAL TECH School Management System — a comprehensive platform for schools, colleges and training centers.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <!-- Bootstrap, Fonts, Icons, AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Orbitron:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Shared site styles -->
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/rgt_logo.png" alt="RAW GLOBAL TECH Logo" width="100">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#software">Software</a></li>
-                    <li class="nav-item"><a class="nav-link" href="school-management-features.html">School Management</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-                </ul>
-            </div>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/rgt_logo.png" alt="RAW GLOBAL TECH logo">
+      RAW GLOBAL <span class="highlight">TECH</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="software.html">Software</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<header class="page-header">
+  <div class="crumbs"><a href="index.html">Home</a> &nbsp;//&nbsp; <a href="software.html">All Software</a> &nbsp;//&nbsp; School Management</div>
+  <h1 data-aos="fade-up">School Management <span class="text-cyan">System</span></h1>
+  <p class="lead-text" data-aos="fade-up" data-aos-delay="100">Our comprehensive School Management System is designed to streamline operations, enhance communication, and improve academic outcomes for schools, colleges, and training centers.</p>
+</header>
+
+<!-- ===== FEATURES ===== -->
+<section class="section-dark">
+  <div class="container">
+
+    <!-- Academic & Student Management -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-mortarboard-fill me-2"></i>Academic & Student Management</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-person-vcard"></i><span><strong>Student Information System</strong> — Manage complete student profiles, guardians, and academic history in one place.</span></li>
+        <li><i class="bi bi-grid"></i><span><strong>Class & Section Management</strong> — Easily create, update, and organize classes, sections, and subjects.</span></li>
+        <li><i class="bi bi-book"></i><span><strong>Subject Management</strong> — Assign teachers, define course outlines, and monitor subject performance.</span></li>
+        <li><i class="bi bi-journal-text"></i><span><strong>Syllabus Management</strong> — Upload and share class syllabi with students and guardians.</span></li>
+        <li><i class="bi bi-file-earmark-text"></i><span><strong>Assignments & Study Materials</strong> — Share assignments, notes, and e-learning resources digitally.</span></li>
+        <li><i class="bi bi-pencil-square"></i><span><strong>Examination Management</strong> — Manage exams, grading systems, report cards, and results.</span></li>
+        <li><i class="bi bi-key"></i><span><strong>Online Result Checking (PIN)</strong> — Students and parents can securely check results using a unique PIN.</span></li>
+      </ul>
+    </div>
+
+    <!-- Attendance & Scheduling -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-clock-history me-2"></i>Attendance & Scheduling</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-calendar-check"></i><span><strong>Attendance Module</strong> — Track student and staff attendance daily with automated reports.</span></li>
+        <li><i class="bi bi-table"></i><span><strong>Timetable Generator</strong> — Auto-generate class timetables for teachers and subjects.</span></li>
+        <li><i class="bi bi-calendar-event"></i><span><strong>School Holidays & Events</strong> — Manage academic calendars, holidays, and event notifications.</span></li>
+      </ul>
+    </div>
+
+    <!-- Finance & Payments -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-credit-card-fill me-2"></i>Finance & Payments</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-cash-coin"></i><span><strong>Online Fee Collection</strong> — Accept student payments securely through PayPal and Stripe.</span></li>
+        <li><i class="bi bi-receipt"></i><span><strong>Invoice & Receipt Tracking</strong> — Generate and monitor all payments and dues in real time.</span></li>
+        <li><i class="bi bi-person-plus"></i><span><strong>Online Admission & Enrollment</strong> — Streamline the application process with online registration and payment.</span></li>
+      </ul>
+    </div>
+
+    <!-- Administration & Facilities -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-building me-2"></i>Administration & Facilities</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-house-door"></i><span><strong>Dormitory Management</strong> — Assign rooms, track occupancy, and manage hostels effortlessly.</span></li>
+        <li><i class="bi bi-bus-front"></i><span><strong>Transportation Management</strong> — Oversee routes, vehicles, and student transportation records.</span></li>
+        <li><i class="bi bi-folder"></i><span><strong>Document Management</strong> — Upload, store, and retrieve important academic or admin documents.</span></li>
+        <li><i class="bi bi-megaphone"></i><span><strong>Moral Talks & Announcements</strong> — Share motivational talks and daily notices with students.</span></li>
+        <li><i class="bi bi-arrow-repeat"></i><span><strong>Backup & Restore</strong> — Automatic backup system for safe data recovery.</span></li>
+      </ul>
+    </div>
+
+    <!-- Dashboard & Reports -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-graph-up me-2"></i>Dashboard & Reports</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-speedometer2"></i><span><strong>Advanced Dashboard</strong> — Get a bird's-eye view of all operations with interactive charts and quick stats.</span></li>
+        <li><i class="bi bi-file-earmark-bar-graph"></i><span><strong>Comprehensive Reporting</strong> — Generate detailed academic, attendance, and financial reports.</span></li>
+        <li><i class="bi bi-arrow-left-right"></i><span><strong>Data Import & Export</strong> — Seamlessly migrate data using Excel or CSV files.</span></li>
+      </ul>
+    </div>
+
+    <!-- Communication & Notifications -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-chat-dots me-2"></i>Communication & Notifications</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-chat-text"></i><span><strong>SMS Alerts</strong> — Send automated notifications to parents and students.</span></li>
+        <li><i class="bi bi-question-circle"></i><span><strong>Help Desk System</strong> — Students can submit queries or complaints directly from their portal.</span></li>
+        <li><i class="bi bi-search"></i><span><strong>Live Student Search</strong> — Instantly find any student record.</span></li>
+        <li><i class="bi bi-phone"></i><span><strong>Custom SMS API</strong> — Integrate with any local or international SMS gateway.</span></li>
+      </ul>
+    </div>
+
+    <!-- Interface & Accessibility -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-globe me-2"></i>Interface & Accessibility</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-moon-stars"></i><span><strong>Dark Mode / Light Mode</strong> — Choose between themes for the best viewing experience.</span></li>
+        <li><i class="bi bi-text-right"></i><span><strong>RTL Language Support</strong> — Fully compatible with Arabic and other right-to-left languages.</span></li>
+        <li><i class="bi bi-translate"></i><span><strong>Multi-Language Translation</strong> — Localize the entire platform for global access.</span></li>
+        <li><i class="bi bi-link-45deg"></i><span><strong>Helpful Links Section</strong> — Quick links to school resources and external sites.</span></li>
+      </ul>
+    </div>
+
+    <!-- System Configuration & Security -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-gear-fill me-2"></i>System Configuration & Security</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-sliders"></i><span><strong>Settings & Configuration Panel</strong> — Manage general settings, school info, and user permissions.</span></li>
+        <li><i class="bi bi-shield-lock"></i><span><strong>Role-Based Access Control</strong> — Secure system with distinct admin, teacher, and student roles.</span></li>
+      </ul>
+    </div>
+
+    <!-- Why Choose Our System -->
+    <div class="feature-category text-center" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-patch-check-fill me-2"></i>Why Choose Our System</h3>
+      <ul class="feature-list d-inline-block text-start mb-0">
+        <li><i class="bi bi-cloud"></i><span>Cloud-based, mobile-friendly, and user-intuitive.</span></li>
+        <li><i class="bi bi-building-check"></i><span>Designed for schools, colleges, and training centers.</span></li>
+        <li><i class="bi bi-currency-dollar"></i><span>Affordable, scalable, and easy to deploy.</span></li>
+        <li><i class="bi bi-code-slash"></i><span>Includes lifetime access to source code and free updates.</span></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="row mt-5">
+      <div class="col-12" data-aos="zoom-in">
+        <div class="cta-band">
+          <h3>Ready to Transform Your School?</h3>
+          <p>Get in touch today for a demo, pricing, or deployment tailored to your institution.</p>
+          <a href="contact.html" class="btn-cyan"><i class="fas fa-paper-plane"></i> Request a Demo</a>
+          <a href="software.html" class="btn-outline-custom ms-lg-3 mt-3 mt-lg-0"><i class="fas fa-layer-group"></i> All Software</a>
         </div>
-    </nav>
+      </div>
+    </div>
 
-    <section id="school-management-features" class="py-5" style="padding-top: 8rem !important;">
-        <div class="container">
-            <h2 class="section-title text-center">School Management System Features</h2>
-            <p class="text-center mb-5">Our comprehensive School Management System is designed to streamline operations, enhance communication, and improve academic outcomes for schools, colleges, and training centers.</p>
+  </div>
+</section>
 
-            <!-- Academic & Student Management -->
-            <div class="feature-category">
-                <h3><i class="bi bi-mortarboard-fill"></i> Academic & Student Management</h3>
-                <ul class="feature-list">
-                    <li><i class="bi bi-person-vcard"></i> Student Information System – Manage complete student profiles, guardians, and academic history in one place.</li>
-                    <li><i class="bi bi-grid"></i> Class & Section Management – Easily create, update, and organize classes, sections, and subjects.</li>
-                    <li><i class="bi bi-book"></i> Subject Management – Assign teachers, define course outlines, and monitor subject performance.</li>
-                    <li><i class="bi bi-journal-text"></i> Syllabus Management – Upload and share class syllabi with students and guardians.</li>
-                    <li><i class="bi bi-file-earmark-text"></i> Assignments & Study Materials – Share assignments, notes, and e-learning resources digitally.</li>
-                    <li><i class="bi bi-pencil-square"></i> Examination Management – Manage exams, grading systems, report cards, and results.</li>
-                    <li><i class="bi bi-key"></i> Online Result Checking (PIN) – Students and parents can securely check results using a unique PIN.</li>
-                </ul>
-            </div>
-
-            <!-- Attendance & Scheduling -->
-            <div class="feature-category">
-                <h3><i class="bi bi-clock-history"></i> Attendance & Scheduling</h3>
-                <ul class="feature-list">
-                    <li><i class="bi bi-calendar-check"></i> Attendance Module – Track student and staff attendance daily with automated reports.</li>
-                    <li><i class="bi bi-table"></i> Timetable Generator – Auto-generate class timetables for teachers and subjects.</li>
-                    <li><i class="bi bi-calendar-event"></i> School Holidays & Events – Manage academic calendars, holidays, and event notifications.</li>
-                </ul>
-            </div>
-
-            <!-- Finance & Payments -->
-            <div class="feature-category">
-                <h3><i class="bi bi-credit-card-fill"></i> Finance & Payments</h3>
-                <ul class="feature-list">
-                    <li><i class="bi bi-cash-coin"></i> Online Fee Collection – Accept student payments securely through PayPal and Stripe.</li>
-                    <li><i class="bi bi-receipt"></i> Invoice & Receipt Tracking – Generate and monitor all payments and dues in real time.</li>
-                    <li><i class="bi bi-person-plus"></i> Online Admission & Enrollment – Streamline the application process with online registration and payment.</li>
-                </ul>
-            </div>
-
-            <!-- Administration & Facilities -->
-            <div class="feature-category">
-                <h3><i class="bi bi-building"></i> Administration & Facilities</h3>
-                <ul class="feature-list">
-                    <li><i class="bi bi-house-door"></i> Dormitory Management – Assign rooms, track occupancy, and manage hostels effortlessly.</li>
-                    <li><i class="bi bi-bus-front"></i> Transportation Management – Oversee routes, vehicles, and student transportation records.</li>
-                    <li><i class="bi bi-folder"></i> Document Management – Upload, store, and retrieve important academic or admin documents.</li>
-                    <li><i class="bi bi-megaphone"></i> Moral Talks & Announcements – Share motivational talks and daily notices with students.</li>
-                    <li><i class="bi bi-arrow-repeat"></i> Backup & Restore – Automatic backup system for safe data recovery.</li>
-                </ul>
-            </div>
-
-            <!-- Dashboard & Reports -->
-            <div class="feature-category">
-                <h3><i class="bi bi-graph-up"></i> Dashboard & Reports</h3>
-                <ul class="feature-list">
-                    <li><i class="bi bi-speedometer2"></i> Advanced Dashboard – Get a bird’s-eye view of all operations with interactive charts and quick stats.</li>
-                    <li><i class="bi bi-file-earmark-bar-graph"></i> Comprehensive Reporting – Generate detailed academic, attendance, and financial reports.</li>
-                    <li><i class="bi bi-arrow-left-right"></i> Data Import & Export – Seamlessly migrate data using Excel or CSV files.</li>
-                </ul>
-            </div>
-
-            <!-- Communication & Notifications -->
-            <div class="feature-category">
-                <h3><i class="bi bi-chat-dots"></i> Communication & Notifications</h3>
-                <ul class="feature-list">
-                    <li><i class="bi bi-chat-text"></i> SMS Alerts – Send automated notifications to parents and students.</li>
-                    <li><i class="bi bi-question-circle"></i> Help Desk System – Students can submit queries or complaints directly from their portal.</li>
-                    <li><i class="bi bi-search"></i> Live Student Search – Instantly find any student record.</li>
-                    <li><i class="bi bi-phone"></i> Custom SMS API – Integrate with any local or international SMS gateway.</li>
-                </ul>
-            </div>
-
-            <!-- Interface & Accessibility -->
-            <div class="feature-category">
-                <h3><i class="bi bi-globe"></i> Interface & Accessibility</h3>
-                <ul class="feature-list">
-                    <li><i class="bi bi-moon-stars"></i> Dark Mode / Light Mode – Choose between themes for the best viewing experience.</li>
-                    <li><i class="bi bi-text-right"></i> RTL Language Support – Fully compatible with Arabic and other right-to-left languages.</li>
-                    <li><i class="bi bi-translate"></i> Multi-Language Translation – Localize the entire platform for global access.</li>
-                    <li><i class="bi bi-link-45deg"></i> Helpful Links Section – Quick links to school resources and external sites.</li>
-                </ul>
-            </div>
-
-            <!-- System Configuration & Security -->
-            <div class="feature-category">
-                <h3><i class="bi bi-gear-fill"></i> System Configuration & Security</h3>
-                <ul class="feature-list">
-                    <li><i class="bi bi-sliders"></i> Settings & Configuration Panel – Manage general settings, school info, and user permissions.</li>
-                    <li><i class="bi bi-shield-lock"></i> Role-Based Access Control – Secure system with distinct admin, teacher, and student roles.</li>
-                </ul>
-            </div>
-
-            <!-- Why Choose Our System -->
-            <div class="feature-category text-center">
-                <h3><i class="bi bi-patch-check-fill"></i> Why Choose Our System</h3>
-                <ul class="feature-list d-inline-block text-start">
-                    <li><i class="bi bi-cloud"></i> Cloud-based, mobile-friendly, and user-intuitive.</li>
-                    <li><i class="bi bi-building-check"></i> Designed for schools, colleges, and training centers.</li>
-                    <li><i class="bi bi-currency-dollar"></i> Affordable, scalable, and easy to deploy.</li>
-                    <li><i class="bi bi-code-slash"></i> Includes lifetime access to source code and free updates.</li>
-                </ul>
-            </div>
-
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-4 text-center text-lg-start">
+        <div class="footer-brand">RAW GLOBAL <br><span class="highlight">TECH</span></div>
+        <p>Innovation Unleashed</p>
+        <p style="font-size:0.85rem;"><i class="fas fa-phone me-2"></i>+231 555 806 349</p>
+        <p style="font-size:0.85rem;"><i class="fas fa-envelope me-2"></i>rawglobalt@gmail.com</p>
+      </div>
+      <div class="col-lg-4 text-center">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="school-management-features.html">School Management</a>
+          <a href="hospital-management-features.html">Hospital</a>
+          <a href="inventory-management-features.html">Inventory</a>
+          <a href="hr-management-features.html">HR Management</a>
+          <a href="contact.html">Contact</a>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer text-center">
-        <p>&copy; 2025 RAW GLOBAL TECH. All rights reserved.</p>
+      </div>
+      <div class="col-lg-4 text-center text-lg-end">
         <div>
-            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/richardarchemedeswilliamsjr" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
         </div>
-    </footer>
+        <p style="font-size:0.8rem;margin-top:12px;">&copy; <span class="footer-year">2025</span> RAW GLOBAL <span class="highlight">TECH</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

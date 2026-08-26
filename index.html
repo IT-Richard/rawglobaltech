@@ -3,453 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAW GLOBAL TECH · Cyber Blue</title>
+  <title>RAW GLOBAL TECH · Innovative IT Solutions</title>
+  <meta name="description" content="RAW GLOBAL TECH — Empowering businesses with cutting-edge IT solutions, software development, and digital transformation services in Liberia.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   <!-- Bootstrap, Fonts, Icons, AOS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Orbitron:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    /* ===== ROOT ===== */
-    :root {
-      --primary-blue: #00b4d8;
-      --primary-dark: #0077b6;
-      --accent-cyan: #00e5ff;
-      --accent-cyan-light: #72f0ff;
-      --bg-dark: #0a0e1a;
-      --bg-dark-secondary: #0f1a2b;
-      --bg-card: #132236;
-      --bg-card-hover: #1c304a;
-      --text-light: #f0f9ff;
-      --text-muted: #90b4d9;
-      --gradient-primary: linear-gradient(135deg, #0077b6, #00b4d8, #00e5ff);
-      --gradient-cyan: linear-gradient(135deg, #00b4d8, #00e5ff, #72f0ff);
-      --shadow-glow: 0 0 35px rgba(0, 180, 216, 0.25);
-      --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-      --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      overflow-x: hidden;
-    }
-    ::-webkit-scrollbar { width:10px; }
-    ::-webkit-scrollbar-track { background:var(--bg-dark); }
-    ::-webkit-scrollbar-thumb { background:var(--gradient-primary); border-radius:10px; }
-
-    /* ===== NAVBAR ===== */
-    .navbar {
-      background: rgba(10,14,26,0.88);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(0,229,255,0.06);
-      padding:12px 0;
-      transition: var(--transition-smooth);
-    }
-    .navbar.scrolled { background:rgba(10,14,26,0.98); box-shadow:0 5px 30px rgba(0,0,0,0.6); }
-    .navbar-brand {
-      font-family:'Orbitron',sans-serif;
-      font-weight:700;
-      font-size:1.8rem;
-      color:var(--accent-cyan) !important;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .navbar-brand:hover { transform:scale(1.02); color:var(--accent-cyan-light) !important; }
-    .navbar-brand img { height:80px; width:auto; }
-    .nav-link {
-      color:var(--text-light) !important;
-      font-weight:500;
-      font-size:0.95rem;
-      padding:8px 16px !important;
-      transition:var(--transition-smooth);
-      position:relative;
-      letter-spacing:0.5px;
-    }
-    .nav-link::after {
-      content:''; position:absolute; bottom:0; left:50%;
-      width:0; height:2px;
-      background:var(--gradient-cyan);
-      transition:var(--transition-smooth);
-      transform:translateX(-50%);
-    }
-    .nav-link:hover::after, .nav-link.active::after { width:70%; }
-    .nav-link:hover { color:var(--accent-cyan) !important; transform:translateY(-2px); }
-    .navbar-toggler { border:1px solid rgba(0,229,255,0.15); padding:8px 12px; border-radius:8px; }
-
-    /* ===== DROPDOWN ===== */
-    .dropdown-menu {
-      background: var(--bg-dark-secondary);
-      border: 1px solid rgba(0,229,255,0.08);
-      border-radius: 12px;
-      padding: 8px 0;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-    }
-    .dropdown-item {
-      color: var(--text-light);
-      padding: 10px 20px;
-      transition: var(--transition-smooth);
-      font-weight: 400;
-    }
-    .dropdown-item:hover {
-      background: rgba(0,229,255,0.08);
-      color: var(--accent-cyan);
-      padding-left: 26px;
-    }
-    .dropdown-divider { border-color: rgba(0,229,255,0.06); }
-
-    /* ===== HERO ===== */
-    .hero {
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      position:relative;
-      overflow:hidden;
-      background:var(--bg-dark);
-      padding:80px 0 60px;
-    }
-    .hero-animation-container {
-      position:absolute; top:0; left:0; width:100%; height:100%;
-      overflow:hidden; z-index:0;
-      background:radial-gradient(ellipse at center, #0a1e30, #0a0e1a);
-    }
-    .hero-content { position:relative; z-index:2; animation:fadeInUp 1.2s ease-out; }
-    @keyframes fadeInUp { from { opacity:0; transform:translateY(60px) scale(0.95); } to { opacity:1; transform:translateY(0) scale(1); } }
-    .hero-badge {
-      display:inline-block; padding:6px 20px;
-      background:rgba(0,229,255,0.08);
-      border:1px solid rgba(0,229,255,0.2);
-      border-radius:50px;
-      font-size:0.85rem; color:var(--accent-cyan);
-      font-weight:500; margin-bottom:20px;
-      letter-spacing:2px; text-transform:uppercase;
-    }
-    .hero h1 {
-      font-family:'Orbitron',sans-serif;
-      font-weight:900;
-      font-size:4.5rem;
-      line-height:1.1;
-      margin-bottom:20px;
-      text-shadow:0 0 40px rgba(0,180,216,0.15);
-    }
-    .hero h1 .highlight { background:var(--gradient-cyan); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .hero p {
-      font-size:1.3rem;
-      color:var(--text-muted);
-      max-width:600px;
-      margin:0 auto 30px;
-      line-height:1.8;
-    }
-    .hero p .sub-line { display:block; font-size:0.9rem; color:var(--text-muted); opacity:0.7; margin-top:-10px; }
-    .btn-primary-custom {
-      display:inline-flex; align-items:center; gap:10px;
-      padding:14px 35px;
-      background:var(--gradient-primary);
-      color:#fff; border:none; border-radius:50px;
-      font-weight:600; font-size:1rem;
-      transition:var(--transition-bounce);
-      text-decoration:none;
-      position:relative; overflow:hidden;
-    }
-    .btn-primary-custom::before {
-      content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
-      background:linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-      transition:var(--transition-smooth);
-    }
-    .btn-primary-custom:hover::before { left:100%; }
-    .btn-primary-custom:hover { transform:translateY(-4px) scale(1.02); box-shadow:0 15px 40px rgba(0,180,216,0.4); color:#fff; }
-    .btn-outline-custom {
-      display:inline-flex; align-items:center; gap:10px;
-      padding:14px 35px;
-      background:transparent;
-      color:var(--text-light);
-      border:2px solid rgba(0,229,255,0.25);
-      border-radius:50px;
-      font-weight:600; font-size:1rem;
-      transition:var(--transition-bounce);
-      text-decoration:none;
-    }
-    .btn-outline-custom:hover { background:rgba(0,229,255,0.05); border-color:var(--accent-cyan); color:var(--accent-cyan); transform:translateY(-4px); }
-
-    /* ===== SECTION TITLES ===== */
-    .section-title {
-      font-family:'Orbitron',sans-serif;
-      font-weight:700;
-      color:var(--accent-cyan);
-      position:relative;
-      margin-bottom:1.5rem;
-      font-size:2.5rem;
-    }
-    .section-title::after {
-      content:''; display:block;
-      width:60px; height:3px;
-      background:var(--gradient-cyan);
-      margin:12px auto 0;
-      border-radius:3px;
-    }
-    .section-subtitle { color:var(--text-muted); font-size:1.1rem; max-width:700px; margin:0 auto 3rem; }
-    .section-dark { background:var(--bg-dark-secondary); padding:80px 0; }
-    .section-darker { background:var(--bg-dark); padding:80px 0; }
-
-    /* ===== SERVICES CARDS ===== */
-    .service-card {
-      background:var(--bg-card);
-      border:1px solid rgba(0,229,255,0.04);
-      border-radius:16px;
-      padding:35px 25px;
-      text-align:center;
-      transition:var(--transition-bounce);
-      height:100%;
-      position:relative;
-      overflow:hidden;
-    }
-    .service-card::before {
-      content:''; position:absolute; top:0; left:0; width:100%; height:3px;
-      background:var(--gradient-primary);
-      transform:scaleX(0);
-      transition:var(--transition-smooth);
-    }
-    .service-card:hover::before { transform:scaleX(1); }
-    .service-card:hover { transform:translateY(-8px); border-color:rgba(0,229,255,0.12); box-shadow:0 20px 60px rgba(0,0,0,0.4); }
-    .service-icon {
-      font-size:3.5rem; margin-bottom:1.2rem; display:block;
-      background:var(--gradient-primary);
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-      transition:var(--transition-smooth);
-    }
-    .service-card:hover .service-icon {
-      background:var(--gradient-cyan);
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-      transform:scale(1.1) rotate(-5deg);
-    }
-    .service-card h5 { color:var(--text-light); font-weight:700; font-size:1.2rem; margin-bottom:10px; }
-    .service-card p { color:var(--text-muted); font-size:0.95rem; line-height:1.6; margin-bottom:0; }
-
-    /* ===== SOFTWARE ITEMS ===== */
-    .software-item {
-      background:var(--bg-card);
-      padding:18px 25px;
-      margin-bottom:12px;
-      border-radius:12px;
-      border:1px solid rgba(0,229,255,0.04);
-      transition:var(--transition-smooth);
-      display:flex;
-      align-items:center;
-      gap:15px;
-    }
-    .software-item:hover { background:var(--bg-card-hover); border-color:rgba(0,229,255,0.12); transform:translateX(8px); }
-    .software-item .s-icon { color:var(--accent-cyan); font-size:1.5rem; min-width:40px; text-align:center; }
-    .software-item .s-content { flex:1; }
-    .software-item .s-title { color:var(--text-light); font-weight:600; font-size:1.05rem; margin-bottom:2px; }
-    .software-item .s-desc { color:var(--text-muted); font-size:0.9rem; }
-
-    /* ===== CONTACT ===== */
-    .contact-info-card {
-      background:var(--bg-card);
-      border-radius:16px;
-      padding:30px;
-      border:1px solid rgba(0,229,255,0.05);
-      transition:var(--transition-smooth);
-      height:100%;
-    }
-    .contact-info-card:hover { border-color:rgba(0,229,255,0.12); transform:translateY(-5px); box-shadow:var(--shadow-glow); }
-    .contact-info-card .contact-icon {
-      width:60px; height:60px;
-      border-radius:50%;
-      display:flex; align-items:center; justify-content:center;
-      background:rgba(0,180,216,0.12);
-      color:var(--accent-cyan);
-      font-size:1.8rem;
-      margin-bottom:15px;
-      transition:var(--transition-smooth);
-    }
-    .contact-info-card:hover .contact-icon { background:rgba(0,229,255,0.12); transform:scale(1.1) rotate(-10deg); }
-    .contact-info-card h6 { color:var(--text-light); font-weight:600; font-size:1rem; margin-bottom:5px; }
-    .contact-info-card p { color:var(--text-muted); font-size:0.95rem; margin-bottom:0; }
-    .contact-info-card a { color:var(--text-muted); text-decoration:none; transition:var(--transition-smooth); }
-    .contact-info-card a:hover { color:var(--accent-cyan); }
-
-    .contact-form {
-      background:var(--bg-card);
-      border-radius:20px;
-      padding:40px;
-      border:1px solid rgba(0,229,255,0.05);
-    }
-    .contact-form .form-control {
-      background:rgba(0,229,255,0.04);
-      border:1px solid rgba(0,229,255,0.06);
-      color:var(--text-light);
-      border-radius:12px;
-      padding:14px 18px;
-      transition:var(--transition-smooth);
-      font-size:0.95rem;
-    }
-    .contact-form .form-control:focus { background:rgba(0,229,255,0.06); border-color:var(--accent-cyan); box-shadow:0 0 0 4px rgba(0,229,255,0.08); }
-    .contact-form .form-control::placeholder { color:var(--text-muted); }
-    .btn-cyan {
-      display:inline-flex; align-items:center; gap:10px;
-      padding:14px 35px;
-      background:var(--gradient-cyan);
-      color:#0a0e1a;
-      border:none;
-      border-radius:50px;
-      font-weight:700;
-      font-size:1rem;
-      transition:var(--transition-bounce);
-      text-decoration:none;
-    }
-    .btn-cyan:hover { transform:translateY(-4px) scale(1.02); box-shadow:0 15px 40px rgba(0,229,255,0.35); color:#0a0e1a; }
-
-    /* ===== FOOTER ===== */
-    .footer {
-      background:#060a12;
-      padding:50px 0 30px;
-      border-top:1px solid rgba(0,229,255,0.04);
-    }
-    .footer-brand { font-family:'Orbitron',sans-serif; font-size:1.5rem; color:var(--accent-cyan); font-weight:700; margin-bottom:10px; }
-    .footer p { color:var(--text-muted); font-size:0.9rem; margin-bottom:5px; }
-    .social-link {
-      display:inline-flex; align-items:center; justify-content:center;
-      width:45px; height:45px;
-      border-radius:50%;
-      background:rgba(0,229,255,0.04);
-      color:var(--text-light);
-      font-size:1.2rem;
-      transition:var(--transition-bounce);
-      text-decoration:none;
-      border:1px solid rgba(0,229,255,0.06);
-    }
-    .social-link:hover { background:var(--gradient-cyan); color:#0a0e1a; transform:translateY(-5px) scale(1.1); box-shadow:0 10px 30px rgba(0,229,255,0.25); }
-    .footer-links a {
-      color:var(--text-muted);
-      text-decoration:none;
-      transition:var(--transition-smooth);
-      font-size:0.9rem;
-      display:inline-block;
-      margin:0 10px;
-    }
-    .footer-links a:hover { color:var(--accent-cyan); transform:translateX(3px); }
-
-    /* ===== particles & floating ===== */
-    .particle {
-      position:absolute;
-      background:var(--gradient-primary);
-      border-radius:50%;
-      opacity:0;
-      animation:particleAnimation 25s infinite ease-in-out;
-      box-shadow:0 0 15px rgba(0,180,216,0.4);
-    }
-    .particle:nth-child(odd) { background:var(--gradient-cyan); box-shadow:0 0 15px rgba(0,229,255,0.4); }
-    @keyframes particleAnimation {
-      0% { transform:translate(var(--x-start), var(--y-start)) scale(0) rotate(0deg); opacity:0; }
-      20% { opacity:0.6; transform:translate(var(--x-mid1), var(--y-mid1)) scale(1) rotate(90deg); }
-      40% { opacity:0.9; transform:translate(var(--x-mid2), var(--y-mid2)) scale(1.3) rotate(180deg); }
-      60% { opacity:0.7; transform:translate(var(--x-mid3), var(--y-mid3)) scale(0.9) rotate(270deg); }
-      80% { opacity:0.4; transform:translate(var(--x-mid4), var(--y-mid4)) scale(0.6) rotate(330deg); }
-      100% { transform:translate(var(--x-end), var(--y-end)) scale(0) rotate(360deg); opacity:0; }
-    }
-    .floating-shape {
-      position:absolute; border-radius:50%; opacity:0.03; pointer-events:none;
-      border:2px solid var(--accent-cyan);
-    }
-    @keyframes floatShape {
-      0%,100% { transform:translate(0,0) rotate(0deg) scale(1); }
-      25% { transform:translate(30px,-20px) rotate(90deg) scale(1.1); }
-      50% { transform:translate(-20px,30px) rotate(180deg) scale(0.9); }
-      75% { transform:translate(20px,-30px) rotate(270deg) scale(1.05); }
-    }
-
-    /* ===== TOAST ===== */
-    .toast-container {
-      position: fixed;
-      top: 80px;
-      right: 20px;
-      z-index: 9999;
-    }
-    .toast-custom {
-      background: var(--bg-card);
-      border: 1px solid rgba(0,229,255,0.1);
-      border-radius: 12px;
-      padding: 16px 24px;
-      color: var(--text-light);
-      min-width: 300px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-      animation: slideInRight 0.5s ease;
-    }
-    .toast-custom.success { border-left: 4px solid #00e5ff; }
-    .toast-custom.error { border-left: 4px solid #ff6b6b; }
-    .toast-custom .toast-icon { font-size: 1.5rem; margin-right: 12px; }
-    .toast-custom.success .toast-icon { color: #00e5ff; }
-    .toast-custom.error .toast-icon { color: #ff6b6b; }
-    .toast-custom .toast-close {
-      cursor: pointer;
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      font-size: 1.2rem;
-      padding: 0 5px;
-      transition: var(--transition-smooth);
-    }
-    .toast-custom .toast-close:hover { color: var(--text-light); }
-    @keyframes slideInRight {
-      from { transform: translateX(100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-    @keyframes slideOutRight {
-      from { transform: translateX(0); opacity: 1; }
-      to { transform: translateX(100%); opacity: 0; }
-    }
-
-    @media (max-width:768px) {
-      .hero h1 { font-size:2.5rem; }
-      .section-title { font-size:1.8rem; }
-      .btn-primary-custom, .btn-outline-custom, .btn-cyan { width:100%; justify-content:center; }
-      .hero .btn-group { flex-direction:column; align-items:center; gap:12px; }
-      .navbar-brand { font-size:1.3rem; }
-      .navbar-brand img { height:40px; }
-    }
-    @media (max-width:480px) {
-      .hero h1 { font-size:2rem; }
-      .toast-custom { min-width: 250px; }
-    }
-  </style>
+  <!-- Shared site styles -->
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="#home">
-      <img src="img/rgt_logo.png" alt="RGT">
-      RAW GLOBAL TECH
+    <a class="navbar-brand" href="index.html">
+      <img src="img/rgt_logo.png" alt="RAW GLOBAL TECH logo">
+      RAW GLOBAL <span class="highlight">TECH</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <!-- SOFTWARE DROPDOWN -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="softwareDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Software
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="softwareDropdown">
-            <li><a class="dropdown-item" href="#software">Our Software Solutions</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="school-management-features.html">School Management System</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="software.html">Software</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -460,101 +46,58 @@
   <div class="hero-animation-container" id="particleContainer"></div>
   <div class="hero-content">
     <h1>RAW GLOBAL <br><span class="highlight">TECH</span></h1>
-    <span class="hero-badge"><i class="fas fa-rocket me-2"></i>Innovation Unleashed</span>
-    <p>
-      Empowering businesses with cutting-edge IT solutions, software development, and digital transformation services.
-      <span class="sub-line">Innovation Unleashed</span>
-    </p>
-    <div class="btn-group">
-      <a href="#services" class="btn-primary-custom"><i class="fas fa-rocket"></i> Explore Services</a>
+     <span class="hero-badge"><i class="fas fa-rocket me-2"></i>Innovation Unleashed</span>
+    <p>Empowering businesses with cutting-edge IT solutions, software development, and digital transformation services.</p>
+    <div class="hero-actions">
+      <a href="services.html" class="btn-primary-custom"><i class="fas fa-rocket"></i> Explore Services</a>
       <a href="about.html" class="btn-outline-custom"><i class="fas fa-users"></i> Meet the Team</a>
     </div>
   </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
-<section id="services" class="section-dark">
+<!-- ===== WHAT WE DO (overview) ===== -->
+<section class="section-dark">
   <div class="container">
     <div class="text-center" data-aos="fade-up">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-subtitle">Comprehensive IT solutions tailored to meet your business needs.</p>
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-subtitle">Three ways we help organisations grow — explore each area.</p>
     </div>
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center">
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card"><span class="service-number" style="position:absolute;top:10px;right:15px;font-size:3rem;font-weight:900;color:rgba(0,229,255,0.03);font-family:'Orbitron',sans-serif;pointer-events:none;">01</span><i class="fas fa-cart-plus service-icon"></i><h5>IT Equipment Sales</h5><p>High-quality IT equipment and hardware solutions.</p></div>
+        <a href="services.html" class="overview-card">
+          <div class="overview-icon"><i class="fas fa-microchip"></i></div>
+          <h4>IT Services</h4>
+          <p>Equipment sales, software development, maintenance, consulting and professional installations.</p>
+          <span class="overview-link">View Services <i class="fas fa-arrow-right ms-1"></i></span>
+        </a>
       </div>
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-card"><span class="service-number" style="position:absolute;top:10px;right:15px;font-size:3rem;font-weight:900;color:rgba(0,229,255,0.03);font-family:'Orbitron',sans-serif;pointer-events:none;">02</span><i class="fas fa-code service-icon"></i><h5>Software Development</h5><p>Custom software and web applications.</p></div>
+        <a href="software.html" class="overview-card">
+          <div class="overview-icon"><i class="fas fa-layer-group"></i></div>
+          <h4>Software Products</h4>
+          <p>Purpose-built systems for schools, hospitals, retail inventory and human resources.</p>
+          <span class="overview-link">View Software <i class="fas fa-arrow-right ms-1"></i></span>
+        </a>
       </div>
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-card"><span class="service-number" style="position:absolute;top:10px;right:15px;font-size:3rem;font-weight:900;color:rgba(0,229,255,0.03);font-family:'Orbitron',sans-serif;pointer-events:none;">03</span><i class="fas fa-tools service-icon"></i><h5>IT Maintenance</h5><p>Reliable maintenance and support services.</p></div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-card"><span class="service-number" style="position:absolute;top:10px;right:15px;font-size:3rem;font-weight:900;color:rgba(0,229,255,0.03);font-family:'Orbitron',sans-serif;pointer-events:none;">04</span><i class="fas fa-chart-line service-icon"></i><h5>IT Consulting</h5><p>Expert strategic guidance for your IT infrastructure.</p></div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-card"><span class="service-number" style="position:absolute;top:10px;right:15px;font-size:3rem;font-weight:900;color:rgba(0,229,255,0.03);font-family:'Orbitron',sans-serif;pointer-events:none;">05</span><i class="fas fa-plug service-icon"></i><h5>Installations</h5><p>Professional installation of IT equipment & networks.</p></div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-card"><span class="service-number" style="position:absolute;top:10px;right:15px;font-size:3rem;font-weight:900;color:rgba(0,229,255,0.03);font-family:'Orbitron',sans-serif;pointer-events:none;">06</span><i class="fas fa-paint-brush service-icon"></i><h5>Graphics & Printing</h5><p>Creative design and high-quality printing services.</p></div>
+        <a href="about.html" class="overview-card">
+          <div class="overview-icon"><i class="fas fa-users-gear"></i></div>
+          <h4>The Team</h4>
+          <p>Engineers, designers and strategists delivering innovation with passion and precision.</p>
+          <span class="overview-link">Meet the Team <i class="fas fa-arrow-right ms-1"></i></span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SOFTWARE (Our Software Solutions) ===== -->
-<section id="software" class="section-darker">
-  <div class="container">
-    <div class="text-center" data-aos="fade-up">
-      <h2 class="section-title">Our Software Solutions</h2>
-      <p class="section-subtitle">Innovative software to streamline operations across industries.</p>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="software-item" data-aos="fade-up" data-aos-delay="100"><div class="s-icon"><i class="fas fa-school"></i></div><div class="s-content"><div class="s-title">School Management System</div><div class="s-desc">Streamline admin, student records, attendance, and performance.</div></div></div>
-        <div class="software-item" data-aos="fade-up" data-aos-delay="150"><div class="s-icon"><i class="fas fa-hospital"></i></div><div class="s-content"><div class="s-title">Hospital Management System</div><div class="s-desc">Patient care, billing, inventory and medical records.</div></div></div>
-        <div class="software-item" data-aos="fade-up" data-aos-delay="200"><div class="s-icon"><i class="fas fa-boxes"></i></div><div class="s-content"><div class="s-title">Inventory Management</div><div class="s-desc">Track stock, manage orders, optimize supply chain.</div></div></div>
-        <div class="software-item" data-aos="fade-up" data-aos-delay="250"><div class="s-icon"><i class="fas fa-users"></i></div><div class="s-content"><div class="s-title">HR Management System</div><div class="s-desc">Employee records, payroll, attendance, recruitment.</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="section-dark">
-  <div class="container">
-    <div class="text-center" data-aos="fade-up">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">Have a project? Reach out and let's bring your ideas to life.</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-lg-5" data-aos="fade-right">
-        <div class="row g-3">
-          <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><h6>Office Location</h6><p>RAW GLOBAL TECH,<br>Liberia</p></div></div>
-          <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-phone"></i></div><h6>Phone / WhatsApp</h6><p><a href="tel:+231555806349">+231 555 806 349</a></p><p><a href="tel:+23177673339">+231 777 673 339</a></p></div></div>
-          <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-envelope"></i></div><h6>Email</h6><p><a href="mailto:rawglobalt@gmail.com">rawglobalt@gmail.com</a></p></div></div>
-          <div class="col-md-6 col-lg-12"><div class="contact-info-card"><div class="contact-icon"><i class="fas fa-clock"></i></div><h6>Working Hours</h6><p>Mon-Fri: 8AM – 6PM<br>Sat: 9AM – 2PM</p></div></div>
-        </div>
-      </div>
-      <div class="col-lg-7" data-aos="fade-left">
-        <div class="contact-form">
-          <h4 class="text-cyan mb-4" style="font-family:'Orbitron',sans-serif;"><i class="fas fa-paper-plane me-2"></i>Send a Message</h4>
-          <form id="contactForm" onsubmit="return handleContact(event)">
-            <div class="row g-3">
-              <div class="col-md-6"><input type="text" class="form-control" id="contactName" placeholder="Full Name" required></div>
-              <div class="col-md-6"><input type="email" class="form-control" id="contactEmail" placeholder="Email" required></div>
-              <div class="col-md-12"><input type="text" class="form-control" id="contactSubject" placeholder="Subject" required></div>
-              <div class="col-md-12"><textarea class="form-control" id="contactMessage" rows="5" placeholder="Message" required></textarea></div>
-              <div class="col-12">
-                <button type="submit" class="btn-cyan w-100" id="submitBtn">
-                  <i class="fas fa-paper-plane me-2"></i>Send Message
-                  <span class="spinner-border spinner-border-sm d-none" role="status" id="sendSpinner"></span>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+<!-- ===== CTA BAND ===== -->
+<section class="section-darker pb-5">
+  <div class="container" data-aos="zoom-in">
+    <div class="cta-band">
+      <h3>Have a Project in Mind?</h3>
+      <p>Tell us about your idea and let's bring it to life together — from first sketch to final deployment.</p>
+      <a href="contact.html" class="btn-cyan"><i class="fas fa-paper-plane"></i> Get In Touch</a>
     </div>
   </div>
 </section>
@@ -564,18 +107,22 @@
   <div class="container">
     <div class="row g-4 align-items-center">
       <div class="col-lg-4 text-center text-lg-start">
-        <div class="footer-brand">RAW GLOBAL TECH</div>
+        <div class="footer-brand">RAW GLOBAL <br><span class="highlight">TECH</span></div>
         <p>Innovation Unleashed</p>
-        <p style="font-size:0.85rem;color:var(--text-muted);"><i class="fas fa-phone me-2"></i>+231 555 806 349</p>
-        <p style="font-size:0.85rem;color:var(--text-muted);"><i class="fas fa-envelope me-2"></i>rawglobalt@gmail.com</p>
+        <p style="font-size:0.85rem;"><i class="fas fa-phone me-2"></i>+231 555 806 349</p>
+        <p style="font-size:0.85rem;"><i class="fas fa-envelope me-2"></i>rawglobalt@gmail.com</p>
       </div>
       <div class="col-lg-4 text-center">
         <div class="footer-links">
-          <a href="#home">Home</a>
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="#services">Services</a>
-          <a href="#software">Software</a>
-          <a href="#contact">Contact</a>
+          <a href="services.html">Services</a>
+          <a href="software.html">All Software</a>
+          <a href="school-management-features.html">School Management</a>
+          <a href="hospital-management-features.html">Hospital</a>
+          <a href="inventory-management-features.html">Inventory</a>
+          <a href="hr-management-features.html">HR Management</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
       <div class="col-lg-4 text-center text-lg-end">
@@ -585,167 +132,15 @@
           <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
           <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
         </div>
-        <p style="font-size:0.8rem;margin-top:12px;color:var(--text-muted);">&copy; 2025 RAW GLOBAL TECH. All rights reserved.</p>
+        <p style="font-size:0.8rem;margin-top:12px;">&copy; <span class="footer-year">2025</span> RAW GLOBAL <span class="highlight">TECH</span>. All rights reserved.</p>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- ===== TOAST CONTAINER ===== -->
-<div class="toast-container" id="toastContainer"></div>
-
 <!-- ===== SCRIPTS ===== -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration:800, easing:'ease-in-out', once:true, offset:100 });
-
-  // navbar scroll
-  window.addEventListener('scroll', function() {
-    const nav = document.getElementById('mainNav');
-    if (window.scrollY > 50) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
-  });
-
-  // particles
-  (function generateParticles() {
-    const container = document.getElementById('particleContainer');
-    if (!container) return;
-    for (let i = 0; i < 60; i++) {
-      const p = document.createElement('div');
-      p.classList.add('particle');
-      const size = Math.random() * 5 + 2;
-      p.style.width = size + 'px'; p.style.height = size + 'px';
-      const rand = () => Math.random() * 100 + 'vw';
-      const rand2 = () => Math.random() * 100 + 'vh';
-      p.style.setProperty('--x-start', rand()); p.style.setProperty('--y-start', rand2());
-      p.style.setProperty('--x-mid1', rand()); p.style.setProperty('--y-mid1', rand2());
-      p.style.setProperty('--x-mid2', rand()); p.style.setProperty('--y-mid2', rand2());
-      p.style.setProperty('--x-mid3', rand()); p.style.setProperty('--y-mid3', rand2());
-      p.style.setProperty('--x-mid4', rand()); p.style.setProperty('--y-mid4', rand2());
-      p.style.setProperty('--x-end', rand()); p.style.setProperty('--y-end', rand2());
-      p.style.animationDelay = Math.random() * 20 + 's';
-      p.style.animationDuration = (Math.random() * 15 + 20) + 's';
-      container.appendChild(p);
-    }
-  })();
-
-  // floating shapes
-  (function addShapes() {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-    const chars = ['✦','◆','▲','●','★'];
-    for (let i=0; i<6; i++) {
-      const s = document.createElement('div');
-      s.className = 'floating-shape';
-      s.textContent = chars[i % chars.length];
-      s.style.fontSize = (Math.random() * 25 + 20) + 'px';
-      s.style.left = (Math.random() * 90 + 5) + '%';
-      s.style.top = (Math.random() * 90 + 5) + '%';
-      s.style.animation = `floatShape ${Math.random() * 15 + 20}s ease-in-out infinite`;
-      s.style.animationDelay = Math.random() * 10 + 's';
-      hero.appendChild(s);
-    }
-  })();
-
-  // ===== TOAST FUNCTION =====
-  function showToast(message, type = 'success') {
-    const container = document.getElementById('toastContainer');
-    if (!container) {
-      const newContainer = document.createElement('div');
-      newContainer.id = 'toastContainer';
-      newContainer.className = 'toast-container';
-      document.body.appendChild(newContainer);
-      return showToast(message, type);
-    }
-    const toast = document.createElement('div');
-    toast.className = `toast-custom ${type}`;
-    const icons = { success: 'fa-check-circle', error: 'fa-exclamation-circle', info: 'fa-info-circle' };
-    toast.innerHTML = `
-      <div class="d-flex align-items-center">
-        <span class="toast-icon"><i class="fas ${icons[type] || icons.success}"></i></span>
-        <span style="flex:1;">${message}</span>
-        <button type="button" class="toast-close" onclick="this.closest('.toast-custom').remove()">&times;</button>
-      </div>
-    `;
-    container.appendChild(toast);
-    setTimeout(() => {
-      if (toast.parentElement) {
-        toast.style.animation = 'slideOutRight 0.5s ease forwards';
-        setTimeout(() => toast.remove(), 500);
-      }
-    }, 6000);
-  }
-
-  // ===== CONTACT FORM - SENDS TO rawglobalt@gmail.com =====
-  function handleContact(e) {
-    e.preventDefault();
-
-    const name = document.getElementById('contactName').value.trim();
-    const email = document.getElementById('contactEmail').value.trim();
-    const subject = document.getElementById('contactSubject').value.trim();
-    const message = document.getElementById('contactMessage').value.trim();
-
-    // Validation
-    if (!name || !email || !subject || !message) {
-      showToast('Please fill in all required fields.', 'error');
-      return false;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      showToast('Please enter a valid email address.', 'error');
-      return false;
-    }
-
-    // Show sending state
-    const submitBtn = document.getElementById('submitBtn');
-    const spinner = document.getElementById('sendSpinner');
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-
-    // Build mailto link with recipient rawglobalt@gmail.com
-    const mailtoSubject = encodeURIComponent('RAW GLOBAL TECH Contact: ' + subject);
-    const mailtoBody = encodeURIComponent(
-      'Name: ' + name + '\n' +
-      'Email: ' + email + '\n\n' +
-      'Message:\n' + message
-    );
-    const mailtoLink = 'mailto:rawglobalt@gmail.com?subject=' + mailtoSubject + '&body=' + mailtoBody;
-
-    // Open email client
-    window.open(mailtoLink, '_blank');
-
-    // Reset button after delay
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
-      spinner.classList.add('d-none');
-    }, 3000);
-
-    showToast('Thank you! Your email client is opening. Please send the message.', 'success');
-
-    // Clear form fields (optional)
-    document.getElementById('contactName').value = '';
-    document.getElementById('contactEmail').value = '';
-    document.getElementById('contactSubject').value = '';
-    document.getElementById('contactMessage').value = '';
-
-    return false;
-  }
-
-  // active nav link
-  const sections = document.querySelectorAll('section[id]');
-  window.addEventListener('scroll', function() {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (window.scrollY >= sectionTop) current = section.getAttribute('id');
-    });
-    document.querySelectorAll('.navbar .nav-link').forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-    });
-  });
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>

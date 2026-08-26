@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Management System · RAW GLOBAL TECH</title>
+  <meta name="description" content="RAW GLOBAL TECH Hospital Management System — patient records, clinical EHR, billing, pharmacy and staff management for clinics and hospitals.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <!-- Bootstrap, Fonts, Icons, AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Orbitron:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Shared site styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/rgt_logo.png" alt="RAW GLOBAL TECH logo">
+      RAW GLOBAL <span class="highlight">TECH</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="software.html">Software</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<header class="page-header">
+  <div class="crumbs"><a href="index.html">Home</a> &nbsp;//&nbsp; <a href="software.html">All Software</a> &nbsp;//&nbsp; Hospital Management</div>
+  <h1 data-aos="fade-up">Hospital Management <span class="text-cyan">System</span></h1>
+  <p class="lead-text" data-aos="fade-up" data-aos-delay="100">Our comprehensive Hospital Management System digitises patient care, clinical workflows, billing and administration — helping clinics and hospitals deliver safer, faster and more connected healthcare.</p>
+</header>
+
+<!-- ===== FEATURES ===== -->
+<section class="section-dark">
+  <div class="container">
+
+    <!-- Patient Management -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-person-heart me-2"></i>Patient Management</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-person-vcard"></i><span><strong>Patient Registration & Records</strong> — Capture complete demographic, contact and insurance details in a unified profile.</span></li>
+        <li><i class="bi bi-clipboard2-pulse"></i><span><strong>Medical History & Allergies</strong> — Track past diagnoses, allergies, chronic conditions and immunisations.</span></li>
+        <li><i class="bi bi-calendar-check"></i><span><strong>Appointment Scheduling</strong> — Book, reschedule and manage appointments across departments and doctors.</span></li>
+        <li><i class="bi bi-hospital"></i><span><strong>Bed & Ward Management</strong> — Monitor bed availability, admissions, transfers and discharges in real time.</span></li>
+        <li><i class="bi bi-person-badge"></i><span><strong>Patient Portal</strong> — Let patients view records, appointments and results securely online.</span></li>
+      </ul>
+    </div>
+
+    <!-- Clinical & EHR -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-activity me-2"></i>Clinical & Electronic Health Records</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-file-medical"></i><span><strong>Electronic Health Records (EHR)</strong> — Centralised digital charts accessible to authorised clinicians.</span></li>
+        <li><i class="bi bi-journal-medical"></i><span><strong>Consultation & Notes</strong> — Structured doctor notes, diagnosis and treatment plans per visit.</span></li>
+        <li><i class="bi bi-capsule"></i><span><strong>Prescription Management</strong> — Generate, print and track digital prescriptions with dosage guidance.</span></li>
+        <li><i class="bi bi-droplet-half"></i><span><strong>Lab & Diagnostics</strong> — Order tests, capture results and link them directly to patient charts.</span></li>
+        <li><i class="bi bi-heart-pulse"></i><span><strong>Vital Signs Tracking</strong> — Record and trend temperature, blood pressure, pulse and oxygen over time.</span></li>
+      </ul>
+    </div>
+
+    <!-- Billing & Finance -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-credit-card-fill me-2"></i>Billing & Finance</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-receipt"></i><span><strong>Billing & Invoicing</strong> — Auto-generate itemised bills for consultations, procedures and admissions.</span></li>
+        <li><i class="bi bi-shield-check"></i><span><strong>Insurance Claims</strong> — Manage cover verification, claims submission and reimbursements.</span></li>
+        <li><i class="bi bi-cash-coin"></i><span><strong>Payment Processing</strong> — Accept cash, card and mobile payments with instant receipts.</span></li>
+        <li><i class="bi bi-graph-up"></i><span><strong>Financial Reports</strong> — Revenue, expense and outstanding-balance reports for management.</span></li>
+      </ul>
+    </div>
+
+    <!-- Pharmacy & Inventory -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-bag-plus me-2"></i>Pharmacy & Inventory</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-prescription2"></i><span><strong>Pharmacy Dispensing</strong> — Fill prescriptions and track dispensed medication against patient visits.</span></li>
+        <li><i class="bi bi-box-seam"></i><span><strong>Drug Stock & Expiry</strong> — Monitor stock levels, batches and expiry dates to prevent wastage.</span></li>
+        <li><i class="bi bi-truck"></i><span><strong>Supplier Management</strong> — Manage vendors, purchase orders and restocking workflows.</span></li>
+      </ul>
+    </div>
+
+    <!-- Staff & Administration -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-people-fill me-2"></i>Staff & Administration</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-person-badge"></i><span><strong>Doctor & Staff Management</strong> — Maintain credentials, departments and schedules for every user.</span></li>
+        <li><i class="bi bi-calendar-week"></i><span><strong>Duty Roster</strong> — Plan shifts, on-call rotations and ward assignments.</span></li>
+        <li><i class="bi bi-shield-lock"></i><span><strong>Role-Based Access Control</strong> — Secure data with distinct admin, doctor, nurse and receptionist roles.</span></li>
+        <li><i class="bi bi-bar-chart"></i><span><strong>Reports & Analytics</strong> — OPD/IPD statistics, patient flow and operational dashboards.</span></li>
+      </ul>
+    </div>
+
+    <!-- Communication -->
+    <div class="feature-category" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-chat-dots me-2"></i>Communication & Alerts</h3>
+      <ul class="feature-list">
+        <li><i class="bi bi-bell"></i><span><strong>SMS & Email Notifications</strong> — Send appointment reminders and result alerts to patients.</span></li>
+        <li><i class="bi bi-exclamation-triangle"></i><span><strong>Emergency Alerts</strong> — Flag critical cases and notify the right team instantly.</span></li>
+      </ul>
+    </div>
+
+    <!-- Why Choose -->
+    <div class="feature-category text-center" data-aos="fade-up" data-aos-delay="50">
+      <h3><i class="bi bi-patch-check-fill me-2"></i>Why Choose Our System</h3>
+      <ul class="feature-list d-inline-block text-start mb-0">
+        <li><i class="bi bi-cloud"></i><span>Cloud-based, secure and accessible from any device.</span></li>
+        <li><i class="bi bi-hospital"></i><span>Designed for clinics, hospitals and specialised centres.</span></li>
+        <li><i class="bi bi-shield-lock"></i><span>HIPAA-aware, with role-based security and audit trails.</span></li>
+        <li><i class="bi bi-code-slash"></i><span>Customisable modules and lifetime updates included.</span></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="row mt-5">
+      <div class="col-12" data-aos="zoom-in">
+        <div class="cta-band">
+          <h3>Ready to Modernise Your Facility?</h3>
+          <p>Get in touch today for a demo, pricing, or deployment tailored to your hospital or clinic.</p>
+          <a href="contact.html" class="btn-cyan"><i class="fas fa-paper-plane"></i> Request a Demo</a>
+          <a href="software.html" class="btn-outline-custom ms-lg-3 mt-3 mt-lg-0"><i class="fas fa-layer-group"></i> All Software</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-4 text-center text-lg-start">
+        <div class="footer-brand">RAW GLOBAL <br><span class="highlight">TECH</span></div>
+        <p>Innovation Unleashed</p>
+        <p style="font-size:0.85rem;"><i class="fas fa-phone me-2"></i>+231 555 806 349</p>
+        <p style="font-size:0.85rem;"><i class="fas fa-envelope me-2"></i>rawglobalt@gmail.com</p>
+      </div>
+      <div class="col-lg-4 text-center">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="software.html">All Software</a>
+          <a href="school-management-features.html">School Management</a>
+          <a href="hospital-management-features.html">Hospital</a>
+          <a href="inventory-management-features.html">Inventory</a>
+          <a href="hr-management-features.html">HR Management</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center text-lg-end">
+        <div>
+          <a href="https://www.facebook.com/richardarchemedeswilliamsjr" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="font-size:0.8rem;margin-top:12px;">&copy; <span class="footer-year">2025</span> RAW GLOBAL <span class="highlight">TECH</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
