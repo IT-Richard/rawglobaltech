@@ -1,0 +1,23 @@
+# RAW GLOBAL TECH
+
+> RAW GLOBAL TECH is a Liberian IT company delivering IT equipment sales, software development, maintenance, consulting, installations, graphics & printing, and business management software (School, Hospital, Inventory and HR Management Systems).
+
+## Software Products
+- [School Management System](https://www.rawglobaltech.com/school-management-features.html): Academic, attendance, finance and communication platform for schools, colleges and training centers.
+- [Hospital Management System](https://www.rawglobaltech.com/hospital-management-features.html): Patient records, clinical EHR, billing, pharmacy and staff management for clinics and hospitals.
+- [Inventory Management System](https://www.rawglobaltech.com/inventory-management-features.html): Stock control, purchasing, sales and warehouse management with real-time valuation.
+- [HR Management System](https://www.rawglobaltech.com/hr-management-features.html): Employees, recruitment, attendance, leave, payroll and performance in one system.
+- [All Software](https://www.rawglobaltech.com/software.html): Overview of every RAW GLOBAL TECH software product.
+
+## Services
+- [Services](https://www.rawglobaltech.com/services.html): IT equipment sales, custom software development, IT maintenance, IT consulting, professional installations, and graphics & printing.
+
+## Company
+- [About](https://www.rawglobaltech.com/about.html): Meet the RAW GLOBAL TECH team.
+- [CEO & Founder](https://www.rawglobaltech.com/richardawilliamsjr.html): Richard A. Williams Jr, CEO & Founder of RAW GLOBAL TECH, LLC — network specialist, cybersecurity professional and software developer.
+- [Contact](https://www.rawglobaltech.com/contact.html): Request a demo, quote or deployment.
+
+## FAQ
+- What features are included in the RAW GLOBAL TECH School Management System? See the School Management System page for academic, attendance, finance, administration, dashboard, communication and interface features.
+- How does RAW GLOBAL TECH handle Hospital Management System deployment? The system is delivered as a secure, cloud-based platform with role-based access; deployment is tailored with setup, data migration, staff training and ongoing updates, plus optional on-premise and custom modules.
+- What IT consulting and software development services does RAW GLOBAL TECH offer? Custom software and web application development, IT equipment sales, IT maintenance & support, strategic IT consulting, professional installations, and graphics & printing.
