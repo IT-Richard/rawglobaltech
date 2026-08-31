@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# Recommend max-snippet/image-preview so rich results render in GSC
+Host: www.rawglobaltech.com
 
 Sitemap: https://www.rawglobaltech.com/sitemap.xml
