@@ -165,7 +165,7 @@
     }, 6000);
   };
 
-  /* ===== Contact form (contact.html) — opens mail client to rawglobalt@gmail.com ===== */
+  /* ===== Contact form (contact.html) — opens mail client to info@rawglobaltech.com ===== */
   window.handleContact = function (e) {
     e.preventDefault();
     const nameEl = document.getElementById('contactName');
@@ -203,7 +203,7 @@
       'Email: ' + email + '\n\n' +
       'Message:\n' + message
     );
-    window.open('mailto:rawglobalt@gmail.com?subject=' + mailtoSubject + '&body=' + mailtoBody, '_blank');
+    window.open('mailto:info@rawglobaltech.com?subject=' + mailtoSubject + '&body=' + mailtoBody, '_blank');
 
     setTimeout(function () {
       if (submitBtn) {
